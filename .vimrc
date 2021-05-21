@@ -19,6 +19,7 @@ autocmd VimEnter * NERDTree | set relativenumber | set nu rnu | if argc() > 0 ||
 autocmd FileType arduino nmap <F8> :!arduino-cli compile --fqbn arduino:avr:uno
 autocmd FileType arduino nmap <F9> :!arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno
 
+autocmd FileType * nmap <C-e> :NERDTreeToggle<CR>
 
 autocmd FileType cpp nmap <F5> :!./%:r<CR>
 autocmd FileType cpp nmap <F8> :make %:r && ./%:r<CR>
