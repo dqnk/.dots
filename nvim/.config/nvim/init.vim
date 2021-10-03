@@ -12,6 +12,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tabnine/YouCompleteMe'
 Plug 'gko/vim-coloresque'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'yegappan/mru'
+Plug 'patstockwell/vim-monokai-tasty'
 
 call plug#end()
 
@@ -21,7 +23,7 @@ set updatetime=100
 syntax enable
 set tabstop=8
 set signcolumn=yes
-silent! colorscheme monokai-tasty
+silent! colorscheme vim-monokai-tasty
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 set showcmd
@@ -33,7 +35,6 @@ set foldmethod=indent
 set clipboard+=unnamedplus
 set wmh=0
 
-set fillchars+=vert:│
 let g:python_highlight_all = 1
 let g:ale_enabled=0
 
