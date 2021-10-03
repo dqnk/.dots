@@ -47,7 +47,17 @@ let g:netrw_keepdir=0
 
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | set relativenumber | set nu rnu | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+"autocmd VimEnter * NERDTree | set relativenumber | set nu rnu | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+autocmd VimEnter *
+                \   if !argc() 
+                \ |   Startify
+                \ |   NERDTree
+		\ |   set relativenumber
+		\ |   set nu rnu
+                \ |   wincmd w
+                \ | endif
 
 autocmd FileType arduino nmap <F8> :!arduino-cli compile --fqbn arduino:avr:uno
 autocmd FileType arduino nmap <F9> :!arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno
