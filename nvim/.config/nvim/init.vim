@@ -23,7 +23,7 @@ set updatetime=100
 syntax enable
 set tabstop=8
 set signcolumn=yes
-silent! colorscheme vim-monokai-tasty
+colorscheme vim-monokai-tasty
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 set showcmd
