@@ -63,7 +63,8 @@ autocmd FileType arduino nmap <F8> :!arduino-cli compile --fqbn arduino:avr:uno
 autocmd FileType arduino nmap <F9> :!arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno
 
 tnoremap <Esc> <C-\><C-n>
-nmap <C-e> :NERDTreeToggle<CR>
+map <F3> :NERDTreeFind<CR>
+map <C-e> :NERDTreeToggle<CR>
 map <C-s> :pyf /usr/share/clang/clang-format.py<cr>
 
 noremap <C-x> :q<cr>
