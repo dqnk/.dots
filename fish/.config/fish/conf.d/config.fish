@@ -6,7 +6,6 @@ alias vim='nvim'
 alias v='nvim'
 alias sudo='doas'
 alias yay='paru'
-alias pls='doas !!'
 fish_vi_key_bindings
 
 export QT_QPA_PLATFORMTHEME=qt5ct
