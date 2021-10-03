@@ -14,6 +14,8 @@ Plug 'gko/vim-coloresque'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'yegappan/mru'
 Plug 'patstockwell/vim-monokai-tasty'
+Plug 'chrisbra/csv.vim'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
