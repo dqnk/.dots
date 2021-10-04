@@ -1,5 +1,4 @@
 "plugins - vim-plug
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'ekickx/clipboard-image.nvim'
@@ -44,7 +43,7 @@ let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
 
 let g:netrw_keepdir=0
-
+let &colorcolumn = join(range(81,999), ',')
 
 autocmd StdinReadPre * let s:std_in=1
 
