@@ -1,6 +1,7 @@
 "plugins - vim-plug
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-scripts/LargeFile'
 Plug 'ekickx/clipboard-image.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -21,6 +22,8 @@ call plug#end()
 "
 set encoding=UTF-8
 set updatetime=100
+set synmaxcol=1024
+set textwidth=80
 syntax enable
 set tabstop=8
 set signcolumn=yes
