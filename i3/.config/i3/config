@@ -191,7 +191,8 @@ bindsym $mod+p mode "resize"
 
 exec --no-startup-id nitrogen --restore
 
-bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome
+#bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome
+bindsym $mod+b exec firefox
 bindsym $mod+g exec kitty "nvim"
 bindsym $mod+v exec code
 bindsym $mod+m bar mode toggle
