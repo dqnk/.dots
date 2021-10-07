@@ -136,7 +136,7 @@ warn-temperature = 80
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "CPU "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
 
@@ -147,7 +147,7 @@ date-alt = %%{F#999}%d-%m-%Y%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
 
 [module/memory]
 type = internal/memory
-format-prefix = " "
+format-prefix = ""
 label = %gb_used%/%gb_free%
 
 bar-used-width = 30
@@ -262,7 +262,7 @@ format-underline = #1db954
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-label-volume =  %percentage%%
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted =  muted
