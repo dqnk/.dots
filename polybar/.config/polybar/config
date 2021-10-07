@@ -35,8 +35,8 @@ foreground = ${colors.snow-storm1}
 line-color = #FF3333
 line-size = 1
 
-padding-left = 0
-padding-right = 0
+padding-left = 1
+padding-right = 1
 module-margin-left = 0
 module-margin-right = 0
 
