@@ -13,6 +13,6 @@ export EDITOR="nvim"
 export PATH="/opt/cuda/bin:$PATH"
 
 set -g theme_display_git_default_branch yes
-set -g theme_color_scheme bobthefish
+set -g theme_color_scheme nord
 
 thefuck --alias | source
