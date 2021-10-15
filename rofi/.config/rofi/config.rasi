@@ -1,5 +1,5 @@
 configuration {
- modi: "window,drun,ssh,combi";
+ modi: "window,ssh,combi";
  theme: "Monokai";
  font: "hack 10";
  combi-modi: "window,drun,file-browser,ssh,file-browser-extended";
