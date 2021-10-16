@@ -81,7 +81,7 @@ tnoremap <Esc> <C-\><C-n>
 map <F3> :NERDTreeFind<CR>
 map <C-e> :NERDTreeToggle<CR>
 map <C-s> :pyf /usr/share/clang/clang-format.py<cr>
-map <C-h> :Goyo
+map <C-h> :Goyo<CR>
 
 autocmd FileType cpp nmap <F5> :!./%:r<CR>
 autocmd FileType cpp nmap <F8> :make %:r && ./%:r<CR>
