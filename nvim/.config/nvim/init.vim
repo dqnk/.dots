@@ -50,6 +50,7 @@ let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
 
 let g:ycm_filetype_blacklist = {}
+let g:goyo_width = 86
 
 let g:netrw_keepdir=0
 let &colorcolumn = join(range(81,999), ',')
@@ -67,6 +68,12 @@ autocmd VimEnter *
                 \ |   wincmd w
                 \ | endif
 
+"numbers for goyo mode
+function! s:goyo_enter()
+	set nu rnu
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd FileType arduino nmap <F8> :!arduino-cli compile --fqbn arduino:avr:uno
 autocmd FileType arduino nmap <F9> :!arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno
 
