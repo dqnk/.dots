@@ -16,6 +16,8 @@ Plug 'yegappan/mru'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'chrisbra/csv.vim'
 Plug 'mhinz/vim-startify'
+Plug 'junegunn/goyo.vim'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -24,6 +26,8 @@ set encoding=UTF-8
 set updatetime=100
 set synmaxcol=1024
 set textwidth=80
+set nocompatible
+filetype plugin on
 syntax enable
 set tabstop=8
 set signcolumn=yes
@@ -44,6 +48,8 @@ let g:ale_enabled=0
 
 let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
+
+let g:ycm_filetype_blacklist = {}
 
 let g:netrw_keepdir=0
 let &colorcolumn = join(range(81,999), ',')
