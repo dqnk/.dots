@@ -2,14 +2,14 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/LargeFile'
-Plug 'ekickx/clipboard-image.nvim'
+"Plug 'ekickx/clipboard-image.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'codota/tabnine-vim'
+"Plug 'codota/tabnine-vim'
 Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tabnine/YouCompleteMe'
+"Plug 'tabnine/YouCompleteMe'
 Plug 'gko/vim-coloresque'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'yegappan/mru'
@@ -19,9 +19,31 @@ Plug 'mhinz/vim-startify'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
 
+"deoplete - autocompletion
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+	Plug 'Shougo/deoplete.nvim'
+	Plug 'roxma/nvim-yarp'
+	Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+let g:deoplete#enable_at_startup = 1
+
+
+
+"deoplete tabnine"
+if has('win32') || has('win64')
+	Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+else
+	Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+endif
+
+
+
 call plug#end()
 
-"
+
 set encoding=UTF-8
 set updatetime=100
 set synmaxcol=1024
@@ -43,6 +65,8 @@ set foldmethod=indent
 set clipboard+=unnamedplus
 set wmh=0
 
+let g:deoplete#enable_at_startup = 1
+
 let g:python_highlight_all = 1
 let g:ale_enabled=0
 
@@ -59,14 +83,25 @@ autocmd StdinReadPre * let s:std_in=1
 
 "autocmd VimEnter * NERDTree | set relativenumber | set nu rnu | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
+"deoplete with tab
+function! s:check_back_space() abort "{{{
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+inoremap <silent><expr> <TAB>
+			\ pumvisible() ? "\<C-n>" :
+			\ <SID>check_back_space() ? "\<TAB>" :
+			\ deoplete#manual_complete()
+
+
 autocmd VimEnter *
-                \   if !argc() 
-                \ |   Startify
-                \ |   NERDTree
-		\ |   set relativenumber
-		\ |   set nu rnu
-                \ |   wincmd w
-                \ | endif
+			\   if !argc() 
+			\ |   Startify
+			\ |   NERDTree
+			\ |   set relativenumber
+			\ |   set nu rnu
+			\ |   wincmd w
+			\ | endif
 
 "numbers for goyo mode
 function! s:goyo_enter()
