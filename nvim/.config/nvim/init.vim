@@ -115,10 +115,11 @@ autocmd FileType arduino nmap <F9> :!arduino-cli upload -p /dev/ttyUSB0 --fqbn a
 tnoremap <Esc> <C-\><C-n>
 map <F3> :NERDTreeFind<CR>
 map <C-e> :NERDTreeToggle<CR>
-map <C-s> :pyf /usr/share/clang/clang-format.py<cr>
+map <C-s> :w<CR>
 map <C-h> :Goyo<CR>
-
+map <C-p> :pyf /usr/share/clang/clang-format.py <CR>
+map <F1> :q<CR>
 autocmd FileType cpp nmap <F5> :!./%:r<CR>
 autocmd FileType cpp nmap <F8> :make %:r && ./%:r<CR>
-autocmd FileType tex nmap <F8> :Latexmk <CR>
+autocmd FileType tex nmap <F8> :Latexmk <CR> 
 autocmd Filetype cpp nmap <F9> :!g++ -std=c++17 -Wshadow -Wall -o %:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:r<CR>
