@@ -2,14 +2,11 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/LargeFile'
-"Plug 'ekickx/clipboard-image.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'codota/tabnine-vim'
 Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
-"Plug 'tabnine/YouCompleteMe'
 Plug 'gko/vim-coloresque'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'yegappan/mru'
