@@ -18,6 +18,10 @@ Plug 'chrisbra/csv.vim'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
 
 "deoplete - autocompletion
 if has('nvim')
