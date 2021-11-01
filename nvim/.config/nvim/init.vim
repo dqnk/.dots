@@ -19,6 +19,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'liuchengxu/vista.vim'
 
 "deoplete - autocompletion
 if has('nvim')
@@ -65,6 +68,8 @@ set nu rnu
 set foldmethod=indent
 set clipboard+=unnamedplus
 set wmh=0
+#has to have space at the end
+set list lcs=tab:\|\ 
 
 let g:deoplete#enable_at_startup = 1
 
@@ -114,12 +119,22 @@ autocmd FileType arduino nmap <F8> :!arduino-cli compile --fqbn arduino:avr:uno
 autocmd FileType arduino nmap <F9> :!arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno
 
 tnoremap <Esc> <C-\><C-n>
+map <Space> <Leader>
 map <F3> :NERDTreeFind<CR>
 map <C-e> :NERDTreeToggle<CR>
 map <C-s> :w<CR>
 map <C-h> :Goyo<CR>
 map <C-p> :pyf /usr/share/clang/clang-format.py <CR>
+map <C-j> :Vista<CR>
 map <F1> :q<CR>
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+
 autocmd FileType cpp nmap <F5> :!./%:r<CR>
 autocmd FileType cpp nmap <F8> :make %:r && ./%:r<CR>
 autocmd FileType tex nmap <F8> :Latexmk <CR> 
