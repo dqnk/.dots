@@ -251,9 +251,6 @@ bar {
     }
 }
 
-workspace $ws1 output $Lmon
-workspace $ws2 output $Rmon
-
 include /etc/sway/config.d/*
 
 exec discord &
