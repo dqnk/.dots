@@ -1,0 +1,74 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Fira Code";
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: #282828;
+  border-bottom: 1px solid #454a50;
+  color: #b2d9eb;
+  opacity: 0.8;
+}
+
+#workspaces button {
+  padding: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: transparent;
+  color: #b2d9eb;
+  border-bottom: 1px solid transparent;
+}
+
+#workspaces button.focused {
+  background: #b2d9eb;
+  color: #1d2021;
+  border-bottom: 1px solid #b2d9eb;
+}
+
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#battery,
+#clock,
+#custom-playerctl {
+  padding: 0 10px;
+  margin: 0 5px;
+}
+
+#battery.charging {
+  color: #689d6a;
+}
+
+#battery.warning:not(.charging) {
+  color: #d79921;
+}
+
+@keyframes blink {
+  to {
+    background-color: #1d2021;
+    color: #b2d9eb;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background: #cc241d;
+  color: #b2d9eb;
+  border-bottom: 1px solid #b2d9eb;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#network.disconnected {
+  color: #cc241d;
+}
+
+#pulseaudio.muted {
+  color: #cc241d;
+}
