@@ -68,7 +68,7 @@ set nu rnu
 set foldmethod=indent
 set clipboard+=unnamedplus
 set wmh=0
-#has to have space at the end
+"has to have space at the end
 set list lcs=tab:\|\ 
 
 let g:deoplete#enable_at_startup = 1
