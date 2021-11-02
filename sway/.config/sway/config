@@ -10,6 +10,7 @@
 set $mod Mod1
 set $sup Mod4
 
+exec --no-startup-id python ~/.config/sway/inactive-windows-transparency.py
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -283,5 +284,6 @@ workspace 4 output DVI-D-1
 workspace 6 output DVI-D-1
 workspace 8 output DVI-D-1
 workspace 10 output DVI-D-1
+
 
 include /etc/sway/config.d/*
