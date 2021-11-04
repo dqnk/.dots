@@ -3,18 +3,21 @@
 		"modules-left": ["sway/workspaces"],
 		"modules-center": ["clock"],
 		"modules-right":
-			["battery","custom/playerctl","custom/weather","network","memory","temperature",
-		"custom/nvidia-temperature","pulseaudio","tray"],
+			["battery","custom/playerctl","custom/weather","memory","temperature",
+		"custom/nvidia-temperature","sway/language","pulseaudio","tray"],
 		"sway/workspaces": {
 			"disable-scroll": true,
 			"all-outputs": true,
 			"format": "{name}: {icon}",
 			"format-icons": {
-				"1":"",
-				"2":"",
-				"3":"",
-				"4":"",
+				"1":"",
+				"2":"",
+				"3":"",
+				"4":"",
 				"5":"",
+				"8":"",
+				"9":"",
+				"10":"ﭮ",
 				"urgent": "",
 				"focused": "",
 				"default": ""
@@ -31,7 +34,7 @@
 			"interval": 1
 		},
 		"memory": {
-			"format": "{used:0.1f}G/{total:0.1f}G",
+			"format": "{used:0.2f}G/{total:0.2f}G",
 			"interval": 1
 		},
 		"battery": {
@@ -78,7 +81,7 @@
 			"interval": 4
 		},
 		"custom/nvidia-temperature": {
-			"format": "﬙{}°C",
+			"format": "﬙{}°C ",
 			"max-length":40,
 			"restart-interval": 1,
 			"exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader",
@@ -91,5 +94,8 @@
 			"interval": 5,
 			"exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
 			"tooltip": false
+		},
+		"sway/language": {
+			"format": "{}"
 		}
 }
