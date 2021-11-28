@@ -1,0 +1,22 @@
+    OpenRGB v0.6
+    Commit:  from 
+    Launched: 20211107_143312
+====================================================================================================
+
+Notice: Detection started
+Notice: Initializing HID interfaces: Success
+Notice: Detecting I2C interfaces
+Notice: Registering I2C interface: /dev/i2c-3
+Notice: Registering I2C interface: /dev/i2c-1
+Notice: Registering I2C interface: /dev/i2c-6
+Notice: Registering I2C interface: /dev/i2c-4
+Notice: Registering I2C interface: /dev/i2c-2
+Notice: Registering I2C interface: /dev/i2c-0
+Notice: Registering I2C interface: /dev/i2c-7
+Notice: Registering I2C interface: /dev/i2c-5
+Notice: Detecting I2C devices
+Notice: Loading plugins
+Notice: Detecting HID devices
+Notice: Registering RGB controller: Razer Deathadder Essential
+Notice: Detecting other devices
+Notice: Detection completed
