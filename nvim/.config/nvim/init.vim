@@ -1,6 +1,7 @@
 "plugins - vim-plug
 call plug#begin('~/.vim/plugged')
 
+Plug 'neovim/nvim-lspconfig'
 Plug 'vim-scripts/LargeFile'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -47,6 +48,10 @@ endif
 
 call plug#end()
 
+lua << EOF
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.clangd.setup{}
+EOF
 
 set encoding=UTF-8
 set updatetime=100
@@ -127,6 +132,7 @@ map <C-h> :Goyo<CR>
 map <C-p> :pyf /usr/share/clang/clang-format.py <CR>
 map <C-j> :Vista<CR>
 map <F1> :q<CR>
+map <F2> :lua vim.lsp.buf.code_action() <CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
