@@ -142,7 +142,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 autocmd FileType cpp nmap <F5> :!./%:r<CR>
 autocmd FileType cpp nmap <F8> :make %:r && ./%:r<CR>
-autocmd FileType tex nmap <F8> :Latexmk <CR> 
+autocmd FileType tex nmap <F8> \ll
 autocmd Filetype cpp nmap <F9> :!g++ -std=c++17 -Wshadow -Wall -o %:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:r<CR>
 
 autocmd BufNewFile  *.cpp 0r ~/.config/nvim/template/template.cpp
