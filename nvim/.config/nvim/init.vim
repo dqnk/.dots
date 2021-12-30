@@ -1,6 +1,5 @@
 "plugins - vim-plug
 call plug#begin('~/.vim/plugged')
-
 Plug 'neovim/nvim-lspconfig'
 Plug 'vim-scripts/LargeFile'
 Plug 'vim-airline/vim-airline'
@@ -9,7 +8,7 @@ Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'gko/vim-coloresque'
-Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'lervag/vimtex'
 Plug 'yegappan/mru'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'chrisbra/csv.vim'
