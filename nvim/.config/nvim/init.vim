@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'liuchengxu/vista.vim'
+Plug 'Yggdroot/indentLine'
 
 "deoplete - autocompletion
 if has('nvim')
@@ -49,7 +50,7 @@ call plug#end()
 
 lua << EOF
 require'lspconfig'.pyright.setup{}
---require'lspconfig'.clangd.setup{}
+require'lspconfig'.clangd.setup{}
 EOF
 
 set encoding=UTF-8
@@ -147,4 +148,4 @@ autocmd FileType tex nmap <F8> \ll
 autocmd Filetype cpp nmap <F9> :!g++ -std=c++17 -Wshadow -Wall -o %:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:r<CR>
 
 autocmd BufNewFile  *.cpp 0r ~/.config/nvim/template/template.cpp
-autocmd FileType cpp set tabstop=2
+autocmd FileType cpp set tabstop=2 expandtab
