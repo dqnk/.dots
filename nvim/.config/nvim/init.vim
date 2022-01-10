@@ -49,7 +49,7 @@ call plug#end()
 
 lua << EOF
 require'lspconfig'.pyright.setup{}
-require'lspconfig'.clangd.setup{}
+--require'lspconfig'.clangd.setup{}
 EOF
 
 set encoding=UTF-8
@@ -60,6 +60,7 @@ set nocompatible
 filetype plugin on
 syntax enable
 set tabstop=8
+set shiftwidth=0
 set signcolumn=yes
 colorscheme vim-monokai-tasty
 highlight Normal ctermbg=none
@@ -146,3 +147,4 @@ autocmd FileType tex nmap <F8> \ll
 autocmd Filetype cpp nmap <F9> :!g++ -std=c++17 -Wshadow -Wall -o %:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:r<CR>
 
 autocmd BufNewFile  *.cpp 0r ~/.config/nvim/template/template.cpp
+autocmd FileType cpp set tabstop=2
