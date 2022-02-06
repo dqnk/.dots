@@ -31,6 +31,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # compositor - issues with 144 hz
 # exec --no-startup-id picom
+exec xrandr --output DP-0 --mode 1920x1080 -rate 144
 
 exec --no-startup-id nm-applet
 exec_always feh --bg-fill ~/Pictures/Wallpapers/deskwall.png
@@ -45,10 +46,21 @@ set $refresh_i3status killall -SIGUSR1 i3status
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 #bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 10 && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 10 && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pamixer -t && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pamixer -t && $refresh_i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 10 && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 10 && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pamixer -t && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id pamixer -t && $refresh_i3status
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86Search exec bemenu-run
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -58,7 +70,7 @@ bindsym $mod+t exec kitty
 
 
 # kill focused window
-bindsym $sup+Shift+c kill
+bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 bindsym $mod+e exec --no-startup-id dmenu_run
@@ -81,10 +93,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $sup+Shift+H move left
-bindsym $sup+Shift+J move down
-bindsym $sup+Shift+K move up
-bindsym $sup+Shift+L move right
+bindsym $mod+Shift+H move left
+bindsym $mod+Shift+J move down
+bindsym $mod+Shift+K move up
+bindsym $mod+Shift+L move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -107,7 +119,7 @@ bindsym $mod+comma layout tabbed
 bindsym $mod+period layout toggle split
 
 # toggle tiling / floating
-bindsym $sup+y floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle
@@ -155,8 +167,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod+Shift+h workspace prev_on_output
-bindsym $mod+Shift+l workspace next_on_output
+bindsym $sup+h workspace prev_on_output
+bindsym $sup+l workspace next_on_output
 
 
 # reload the configuration file
@@ -231,8 +243,7 @@ bindsym $mod+f exec nemo
 #client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 #client.urgent           #2f343a #900000 #ffffff #900000   #900000
 #client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
-
+#
 workspace $ws1 output $Lmon
 
 workspace $ws3 output $Lmon
@@ -243,14 +254,14 @@ workspace $ws7 output $Lmon
 
 workspace $ws9 output $Lmon
 
-workspace $ws2 output $Rmon
+workspace $ws2 output $Lmon
 
-workspace $ws4 output $Rmon
+workspace $ws4 output $Lmon
 
-workspace $ws6 output $Rmon
+workspace $ws6 output $Lmon
 
-workspace $ws8 output $Rmon
+workspace $ws8 output $Lmon
 
-workspace $ws10 output $Rmon
+workspace $ws10 output $Lmon
 
 bindsym $mod+space exec rofi -show combi

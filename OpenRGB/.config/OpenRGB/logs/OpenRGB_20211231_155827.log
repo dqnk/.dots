@@ -1,0 +1,34 @@
+    OpenRGB v0.7
+    Commit:  from 
+    Launched: 20211231_155827
+====================================================================================================
+
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    |               Start device detection               |
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    Initializing HID interfaces: Success
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    |             Detecting I2C interfaces               |
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:21C4 Subsystem: 10DE:13D3
+1009  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:21C4 Subsystem: 10DE:13D3
+1009  |Info:    Registering I2C interface: /dev/i2c-6 Device 1022:790B Subsystem: 1462:7C02
+1009  |Info:    Registering I2C interface: /dev/i2c-4 Device 1022:790B Subsystem: 1462:7C02
+1009  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:21C4 Subsystem: 10DE:13D3
+1009  |Info:    Registering I2C interface: /dev/i2c-0 Device 10DE:21C4 Subsystem: 10DE:13D3
+1010  |Info:    Registering I2C interface: /dev/i2c-7 Device 10DE:1AED Subsystem: 10DE:13D3
+1010  |Info:    Registering I2C interface: /dev/i2c-5 Device 1022:790B Subsystem: 1462:7C02
+1010  |Info:    ------------------------------------------------------
+1010  |Info:    |               Detecting I2C devices                |
+1010  |Info:    ------------------------------------------------------
+1114  |Info:    Loading plugins
+1684  |Info:    ------------------------------------------------------
+1684  |Info:    |               Detecting HID devices                |
+1684  |Info:    ------------------------------------------------------
+1703  |Info:    [Razer Deathadder Essential] Registering RGB controller
+1703  |Info:    ------------------------------------------------------
+1703  |Info:    |              Detecting other devices               |
+1703  |Info:    ------------------------------------------------------
+1708  |Info:    ------------------------------------------------------
+1708  |Info:    |                Detection completed                 |
+1708  |Info:    ------------------------------------------------------
