@@ -1,5 +1,6 @@
 "plugins - vim-plug
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-plug'
 Plug 'neovim/nvim-lspconfig'
 Plug 'vim-scripts/LargeFile'
 Plug 'vim-airline/vim-airline'
@@ -49,8 +50,8 @@ endif
 call plug#end()
 
 lua << EOF
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.clangd.setup{}
+--require'lspconfig'.pyright.setup{}
+--require'lspconfig'.clangd.setup{}
 EOF
 
 set encoding=UTF-8
@@ -149,3 +150,4 @@ autocmd Filetype cpp nmap <F9> :!g++ -std=c++17 -Wshadow -Wall -o %:r % -g -fsan
 
 autocmd BufNewFile  *.cpp 0r ~/.config/nvim/template/template.cpp
 autocmd FileType cpp set tabstop=2 expandtab
+autocmd BufEnter *.tex set conceallevel=0
