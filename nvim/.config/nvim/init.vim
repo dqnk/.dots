@@ -13,6 +13,7 @@ Plug 'lervag/vimtex'
 Plug 'yegappan/mru'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'chrisbra/csv.vim'
+Plug 'tomasr/molokai'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
@@ -61,7 +62,8 @@ set textwidth=80
 set nocompatible
 filetype plugin on
 syntax enable
-set tabstop=8
+set tabstop=2
+set expandtab
 set shiftwidth=0
 set signcolumn=yes
 colorscheme vim-monokai-tasty
@@ -77,6 +79,9 @@ set clipboard+=unnamedplus
 set wmh=0
 "has to have space at the end
 set list lcs=tab:\|\ 
+
+let g:indentLine_char = '|'
+let g:indentLine_color_term = 239 
 
 let g:deoplete#enable_at_startup = 1
 
@@ -121,20 +126,25 @@ function! s:goyo_enter()
 	set nu rnu
 endfunction
 
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd FileType arduino nmap <F8> :!arduino-cli compile --fqbn arduino:avr:uno
-autocmd FileType arduino nmap <F9> :!arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno
+autocmd FileType arduino nmap <F8> ;!arduino-cli compile --fqbn arduino:avr:uno
+autocmd FileType arduino nmap <F9> ;!arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno
 
 tnoremap <Esc> <C-\><C-n>
 map <Space> <Leader>
-map <F3> :NERDTreeFind<CR>
-map <C-e> :NERDTreeToggle<CR>
-map <C-s> :w<CR>
-map <C-h> :Goyo<CR>
-map <C-p> :pyf /usr/share/clang/clang-format.py <CR>
-map <C-j> :Vista<CR>
-map <F1> :q<CR>
-map <F2> :lua vim.lsp.buf.code_action() <CR>
+map <F3> ;NERDTreeFind<CR>
+map <C-e> ;NERDTreeToggle<CR>
+map <C-s> ;w<CR>
+map <C-h> ;Goyo<CR>
+map <C-p> ;pyf /usr/share/clang/clang-format.py <CR>
+map <C-j> ;Vista<CR>
+map <F1> ;q<CR>
+map <F2> ;lua vim.lsp.buf.code_action() <CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -143,11 +153,14 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
-autocmd FileType cpp nmap <F5> :!./%:r<CR>
-autocmd FileType cpp nmap <F8> :make %:r && ./%:r<CR>
+autocmd FileType cpp nmap <F5> ;!./%:r<CR>
+autocmd FileType cpp nmap <F8> ;make %:r && ./%:r<CR>
 autocmd FileType tex nmap <F8> \ll
-autocmd Filetype cpp nmap <F9> :!g++ -std=c++17 -Wshadow -Wall -o %:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:r<CR>
+autocmd Filetype cpp nmap <F9> ;!g++ -std=c++17 -Wshadow -Wall -o %:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:r<CR>
 
 autocmd BufNewFile  *.cpp 0r ~/.config/nvim/template/template.cpp
 autocmd FileType cpp set tabstop=2 expandtab
+autocmd FileType hpp set tabstop=2 expandtab
+autocmd FileType cu set tabstop=2 expandtab
+autocmd FileType cuh set tabstop=2 expandtab
 autocmd BufEnter *.tex set conceallevel=0
