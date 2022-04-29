@@ -2,7 +2,6 @@ function fish_greeting
 end
 
 alias ls='ls --color=auto'
-alias vim='nvim'
 alias v='nvim'
 alias sudo='doas'
 alias yay='paru'

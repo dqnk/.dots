@@ -1,8 +1,8 @@
 configuration {
- modi: "window,ssh,combi";
- theme: "Monokai";
- font: "hack 10";
- combi-modi: "window,drun,file-browser,ssh,file-browser-extended";
- icon-theme: "Papirus";
- show-icons: true;
- }
+modi: "window,ssh,combi";
+font: "hack 10";
+      combi-modi: "window,drun,file-browser,ssh,file-browser-extended";
+      icon-theme: "Papirus";
+      show-icons: true;
+}
+@theme "Monokai"
