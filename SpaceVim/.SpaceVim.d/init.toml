@@ -1,0 +1,77 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+# set spacevim theme. by default colorscheme layer is not loaded,
+# if you want to use more colorscheme, please load the colorscheme
+# layer
+colorscheme = "gruvbox"
+colorscheme_bg = "dark"
+# Disable guicolors in basic mode, many terminal do not support 24bit
+# true colors
+enable_guicolors = true
+# Disable statusline separator, if you want to use other value, please
+# install nerd fonts
+statusline_separator = "arrow"
+statusline_iseparator = "arrow"
+buffer_index_type = 4
+enable_tabline_filetype_icon = true
+enable_statusline_mode = false
+bootstrap_before = 'myspacevim#before'
+bootstrap_after = 'myspacevim#after'
+guifont = "Fira Code Regular Nerd Font Complete Mono:h8"
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+autocomplete_method = "deoplete"
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+name = "colorscheme"
+
+[[layers]]
+name = "format"
+format_method = "neoformat"
+format_on_save = false
+
+[[layers]]
+name = "git"
+git_plugin = 'git'
+
+[options]
+default_indent = 2
+expand_tab = true
+
+[[layers]]
+name = "lang#c"
+clang_executable = "clang"
+enable_clang_syntax_highlight = false
+
+[[layers]]
+name = "lang#python"
+python_interpreter = "/usr/bin/python"
+
+[[layers]]
+name = "lang#latex"
+
+[[layers]]
+name = "lang#assembly"
+
+[options]
+enable_vimfiler_filetypeicon = true
+enable_tabline_filetype_icon = true
+statusline_separator = 'arrow'
+colorscheme = "gruvbox"
