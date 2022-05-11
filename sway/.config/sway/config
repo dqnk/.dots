@@ -41,11 +41,11 @@ input * {
     tap enabled
     scroll_method two_finger
     natural_scroll enabled
-
 }
 
 #input * xkb_model "pc101"
-
+#bindswitch --reload --locked lid:on output $laptop disable
+#bindswitch --reload --locked lid:off output $laptop enable
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -81,11 +81,11 @@ bindsym XF86Search exec bemenu-run
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle \
+          timeout 30 'swaylock -f -c 000000' \
+          timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f -c 000000'
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
