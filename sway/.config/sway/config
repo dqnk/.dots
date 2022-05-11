@@ -40,6 +40,7 @@ input * {
 }
 
 #input * xkb_model "pc101"
+input * xkb_options compose:ralt
 
 ### Output configuration
 #
