@@ -33,27 +33,27 @@ input * {
 	xkb_layout us(dvorak),si
 		xkb_options "grp:win_space_toggle"
 		accel_profile flat
-		pointer_accel -0.75
+		pointer_accel 1
 		repeat_rate 40
 		repeat_delay 400
 		xkb_numlock enabled
 }
 
-input * xkb_model "pc101"
+#input * xkb_model "pc101"
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/Pictures/Wallpapers/deskwall.png fill
-#
+#output * bg ~/Pictures/Wallpapers/deskwall.png fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output DVI-D-1 mode 1680x1050@60Hz pos 1920 0
-output DP-1 mode 1920x1080@144Hz pos 0 0
+#output DVI-D-1 mode 1680x1050@60Hz pos 1920 0
+#output DP-1 mode 1920x1080@144Hz pos 0 0
 
 set $opacity 0.95
 for_window [class=".*"] opacity $opacity
@@ -116,7 +116,7 @@ bindsym $mod+m bar mode toggle
 bindsym $mod+d exec discord
 bindsym $mod+c exec gnome-calculator
 bindsym $mod+w exec libreoffice --writer
-bindsym $mod+f exec nemo
+bindsym $mod+f exec nautilus
 
 # Kill focused window
 bindsym $mod+Shift+c kill
