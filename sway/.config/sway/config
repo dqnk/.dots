@@ -51,7 +51,8 @@ input * {
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg ~/Pictures/Wallpapers/deskwall.png fill
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -82,8 +83,8 @@ bindsym XF86Search exec bemenu-run
 # Example configuration:
 #
 exec swayidle \
-          timeout 30 'swaylock -f -c 000000' \
-          timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
