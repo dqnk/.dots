@@ -38,10 +38,14 @@ let g:spacevim_autocomplete_method = 'deoplete'
 let g:spacevim_custom_plugins = [
       \ ['tbodt/deoplete-tabnine', {'build': './install.sh'}],
 \ ]
+
 call SpaceVim#layers#load('lang#c')
 call SpaceVim#layers#load('lang#python')
 call SpaceVim#layers#load('lang#java')
+call SpaceVim#layers#load('lang#jsonet')
 call SpaceVim#layers#load('lang#rust')
 call SpaceVim#layers#load('autocomplete')
+call SpaceVim#layers#load('colorscheme')
 call SpaceVim#layers#load('shell')
 
+let g:spacevim_colorscheme='molokai'
