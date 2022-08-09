@@ -16,8 +16,8 @@ set EDITOR nvim
 set VISUAL nvim
 set -Ux BUN_INSTALL "/home/dqnk/.bun"
 set WLR_NO_HARDWARE_CURSORS 1
-set NODE_OPTIONS=--max_old_space_size 8192
-set SSH_AUTH_SOCK /run/user/1000/keyring/ssh
+set NODE_OPTIONS --max_old_space_size=8192
+export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 set -g theme_display_git_default_branch yes
 set -g theme_color_scheme nord
 

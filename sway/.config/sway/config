@@ -10,7 +10,7 @@
 set $mod Mod1
 set $sup Mod4
 
-exec --no-startup-id python ~/.config/sway/inactive-windows-transparency.py
+#exec --no-startup-id python ~/.config/sway/inactive-windows-transparency.py
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -112,9 +112,9 @@ exec swayidle \
 # Start a terminal
 bindsym $mod+Return exec $term
 
-#bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome
+bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome
 bindsym $mod+t exec kitty
-bindsym $mod+b exec firefox
+#bindsym $mod+b exec firefox
 #bindsym $mod+b exec epiphany --new-window
 bindsym $mod+g exec kitty -e nvim
 bindsym $mod+v exec code --enable-features=UseOzonePlatform --ozone-platform=wayland
@@ -282,22 +282,7 @@ bindsym $mod+r mode "resize"
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-#    mode hide
-#
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-	swaybar_command waybar
-}
+
 
 workspace 1 output DP-1
 workspace 2 output DP-1
@@ -326,4 +311,21 @@ gaps inner 0
 #smart_gaps on
 
 
+exec gnome-keyring-daemon --start --components="ssh,secrets"
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+#    position top
+#
+#    # When the status_command prints a new line to stdout, swaybar updates.
+#    # The default just shows the current date and time.
+#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+#    mode hide
+#
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#        inactive_workspace #32323200 #32323200 #5c5c5c
+#    }
+	swaybar_command waybar
+}
 include /etc/sway/config.d/*
