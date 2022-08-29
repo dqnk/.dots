@@ -5,6 +5,9 @@ alias ls='ls --color=auto'
 alias v='nvim'
 alias sudo='doas'
 alias yay='paru'
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+alias dcub="docker compose up --build"
 fish_vi_key_bindings
 
 fish_add_path "/home/dqnk/.bun/bin"
