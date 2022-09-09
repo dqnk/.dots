@@ -10,7 +10,7 @@
 set $mod Mod1
 set $sup Mod4
 
-exec --no-startup-id python ~/.config/sway/inactive-windows-transparency.py
+#exec --no-startup-id python ~/.config/sway/inactive-windows-transparency.py
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -119,7 +119,7 @@ bindsym $mod+Return exec $term
 #bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome --force-device-scale-factor=2
 bindsym $mod+t exec kitty
 bindsym $mod+b exec firefox
-
+bindsym $mod+t exec kitty
 #bindsym $mod+b exec epiphany --new-window
 bindsym $mod+g exec kitty -e nvim
 bindsym $mod+v exec code
@@ -155,11 +155,6 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-# Or use $mod+[up|down|left|right]
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # Move the focused window with the same, but add Shift
 bindsym $mod+Shift+$left move left
@@ -292,22 +287,7 @@ bindsym $mod+r mode "resize"
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-#    mode hide
-#
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-	swaybar_command waybar
-}
+
 
 workspace 1 output   DP-1
 workspace 2 output   DP-1
@@ -336,4 +316,21 @@ gaps inner 0
 #smart_gaps on
 
 
+exec gnome-keyring-daemon --start --components="ssh,secrets"
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+#    position top
+#
+#    # When the status_command prints a new line to stdout, swaybar updates.
+#    # The default just shows the current date and time.
+#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+#    mode hide
+#
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#        inactive_workspace #32323200 #32323200 #5c5c5c
+#    }
+	swaybar_command waybar
+}
 include /etc/sway/config.d/*
