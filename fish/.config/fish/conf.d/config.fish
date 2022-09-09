@@ -1,20 +1,3 @@
-~/.config/fish/conf.d/config.fish (line 2): Expected a string, but found a redirection
-<<<<<<< HEAD
-^
-from sourcing file ~/.config/fish/conf.d/config.fish
-	called on line 246 of file /usr/share/fish/config.fish
-from sourcing file /usr/share/fish/config.fish
-	called during startup
-source: Error while reading file “/home/dqnk/.config/fish/conf.d/config.fish”
-~/.config/fish/conf.d/config_BACKUP_128767.fish (line 14): Expected a string, but found a redirection
-<<<<<<< HEAD
-^
-from sourcing file ~/.config/fish/conf.d/config_BACKUP_128767.fish
-	called on line 246 of file /usr/share/fish/config.fish
-from sourcing file /usr/share/fish/config.fish
-	called during startup
-source: Error while reading file “/home/dqnk/.config/fish/conf.d/config_BACKUP_128767.fish”
-
 alias ls='ls --color=auto'
 alias v='nvim'
 alias sudo='doas'
