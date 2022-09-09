@@ -1,3 +1,6 @@
+function fish_greeting
+end
+
 alias ls='ls --color=auto'
 alias v='nvim'
 alias sudo='doas'
