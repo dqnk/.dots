@@ -65,11 +65,6 @@ output DP-1 bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 #output DVI-D-1 mode 1680x1050@60Hz pos 1920 0
 #output DP-1 mode 1920x1080@144Hz pos 0 0
 
-set $opacity 0.95
-for_window [class=".*"] opacity $opacity
-for_window [app_id=".*"] opacity $opacity
-for_window [floating] opacity 1
-
 #Volume, brightness...
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -119,7 +114,6 @@ bindsym $mod+Return exec $term
 #bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome --force-device-scale-factor=2
 bindsym $mod+t exec kitty
 bindsym $mod+b exec firefox
-bindsym $mod+t exec kitty
 #bindsym $mod+b exec epiphany --new-window
 bindsym $mod+g exec kitty -e nvim
 bindsym $mod+v exec code
@@ -315,8 +309,11 @@ default_border none
 gaps inner 0
 #smart_gaps on
 
+exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.95
 
 exec gnome-keyring-daemon --start --components="ssh,secrets"
+
+
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 #    position top
@@ -333,4 +330,4 @@ bar {
 #    }
 	swaybar_command waybar
 }
-include /etc/sway/config.d/*
+
