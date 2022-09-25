@@ -5,18 +5,13 @@ alias ls='ls --color=auto'
 alias v='nvim'
 alias sudo='doas'
 alias yay='paru'
-alias dcu="docker compose up"
-alias dcd="docker compose down"
-alias dcub="docker compose up --build"
+alias dub="docker compose up --build"
 fish_vi_key_bindings
 
 fish_add_path "/home/dqnk/.bun/bin"
 
 
-export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_STYLE_OVERRIDE=adwaita-dark
-export EDITOR="nvim"
-export VISUAL="nvim"
 fish_add_path /opt/cuda/bin
 fish_add_path ~/.local/bin/
 
