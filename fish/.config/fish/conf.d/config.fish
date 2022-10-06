@@ -11,7 +11,6 @@ fish_vi_key_bindings
 fish_add_path "/home/dqnk/.bun/bin"
 
 
-export QT_STYLE_OVERRIDE=adwaita-dark
 fish_add_path /opt/cuda/bin
 fish_add_path ~/.local/bin/
 
