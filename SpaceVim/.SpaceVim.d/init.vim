@@ -1,8 +1,10 @@
 autocmd BufNewFile *.cpp 0r ~/.SpaceVim.d/skeletons/cp.cpp
+autocmd BufNewFile *.tex 0r ~/.SpaceVim.d/skeletons/template.tex
 augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
+let g:vimtex_view_general_viewer = 'zathura'
 let g:neoformat_enabled_c = ['clangformat']
 let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_enabled_cuda = ['clangformat']
@@ -45,6 +47,7 @@ call SpaceVim#layers#load('lang#python')
 call SpaceVim#layers#load('lang#java')
 call SpaceVim#layers#load('lang#jsonet')
 call SpaceVim#layers#load('lang#rust')
+call SpaceVim#layers#load('lang#latex')
 call SpaceVim#layers#load('autocomplete')
 call SpaceVim#layers#load('colorscheme')
 call SpaceVim#layers#load('shell')
