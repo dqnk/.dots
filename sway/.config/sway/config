@@ -40,7 +40,7 @@ input * {
     xkb_options compose:ralt
     tap enabled
     scroll_method two_finger
-    natural_scroll disabled
+    natural_scroll enabled
 }
 
 #input * xkb_model "pc101"
@@ -51,12 +51,8 @@ input * {
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg ~/Pictures/Wallpapers/deskwall.png fill
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output HDMI-A-1 mode 3840x2160@60Hz pos 0 0 
-output HDMI-A-1 transform 270
-output DP-1 mode 1920x1080@144Hz pos 2160 1380
-output HDMI-A-1 bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
-output DP-1 bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
+output * bg ~/Pictures/blue.png fill
+#output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -111,12 +107,13 @@ exec swayidle \
 # Start a terminal
 bindsym $mod+Return exec $term
 
-#bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome --force-device-scale-factor=2
+#bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome 
 bindsym $mod+t exec kitty
 bindsym $mod+b exec firefox
 #bindsym $mod+b exec epiphany --new-window
 bindsym $mod+g exec kitty -e nvim
-bindsym $mod+v exec code
+bindsym $mod+v exec code --ozone-platform=wayland
+bindsym $mod+i exec insomnia --ozone-platform=wayland
 bindsym $mod+m bar mode toggle
 bindsym $mod+d exec discord --disable-gpu
 bindsym $mod+c exec gnome-calculator
@@ -213,6 +210,10 @@ bindsym $sup+Shift+8 move container to workspace number 18
 bindsym $sup+Shift+9 move container to workspace number 19
 bindsym $sup+Shift+0 move container to workspace number 20
 
+bindsym $mod+$sup+x exec warpd --hint
+bindsym $mod+$sup+c exec warpd --normal
+bindsym $mod+$sup+g exec warpd --grid
+
 
 # Note: workspaces can have any name you want, not just numbers.
 # We just use 1-10 as the default.
@@ -276,6 +277,7 @@ mode "resize" {
 		bindsym Return mode "default"
 		bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
 #
@@ -283,27 +285,27 @@ bindsym $mod+r mode "resize"
 #
 
 
-workspace 1 output   DP-1
-workspace 2 output   DP-1
-workspace 3 output   DP-1
-workspace 4 output   DP-1
-workspace 5 output   DP-1
-workspace 6 output   DP-1
-workspace 7 output   DP-1
-workspace 8 output   DP-1
-workspace 9 output   DP-1
-workspace 10 output  DP-1
+workspace 1 output   eDP-1
+workspace 2 output   eDP-1
+workspace 3 output   eDP-1
+workspace 4 output   eDP-1
+workspace 5 output   eDP-1
+workspace 6 output   eDP-1
+workspace 7 output   eDP-1
+workspace 8 output   eDP-1
+workspace 9 output   eDP-1
+workspace 10 output  eDP-1
 
-workspace 11 output HDMI-A-1
-workspace 12 output HDMI-A-1
-workspace 13 output HDMI-A-1
-workspace 14 output HDMI-A-1
-workspace 15 output HDMI-A-1
-workspace 16 output HDMI-A-1
-workspace 17 output HDMI-A-1
-workspace 18 output HDMI-A-1
-workspace 19 output HDMI-A-1
-workspace 20 output HDMI-A-1
+#workspace 11 output HDMI-A-1
+#workspace 12 output HDMI-A-1
+#workspace 13 output HDMI-A-1
+#workspace 14 output HDMI-A-1
+#workspace 15 output HDMI-A-1
+#workspace 16 output HDMI-A-1
+#workspace 17 output HDMI-A-1
+#workspace 18 output HDMI-A-1
+#workspace 19 output HDMI-A-1
+#workspace 20 output HDMI-A-1
 
 default_border none
 gaps inner 0
@@ -331,3 +333,4 @@ bar {
 	swaybar_command waybar
 }
 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
