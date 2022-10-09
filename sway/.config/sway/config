@@ -39,8 +39,6 @@ input * {
 		xkb_numlock enabled
     xkb_options compose:ralt
     tap enabled
-    scroll_method two_finger
-    natural_scroll enabled
 }
 
 #input * xkb_model "pc101"
@@ -51,7 +49,11 @@ input * {
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg ~/Pictures/Wallpapers/deskwall.png fill
-output * bg ~/Pictures/blue.png fill
+output HDMI-A-1 mode 3840x2160@60Hz pos 0 0 
+output HDMI-A-1 transform 270
+output DP-1 mode 1920x1080@144Hz pos 2160 1380
+output HDMI-A-1 bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
+output DP-1 bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 #output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 # Example configuration:
 #
@@ -107,7 +109,7 @@ exec swayidle \
 # Start a terminal
 bindsym $mod+Return exec $term
 
-#bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome 
+#bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome
 bindsym $mod+t exec kitty
 bindsym $mod+b exec firefox
 #bindsym $mod+b exec epiphany --new-window
@@ -296,16 +298,16 @@ workspace 8 output   eDP-1
 workspace 9 output   eDP-1
 workspace 10 output  eDP-1
 
-#workspace 11 output HDMI-A-1
-#workspace 12 output HDMI-A-1
-#workspace 13 output HDMI-A-1
-#workspace 14 output HDMI-A-1
-#workspace 15 output HDMI-A-1
-#workspace 16 output HDMI-A-1
-#workspace 17 output HDMI-A-1
-#workspace 18 output HDMI-A-1
-#workspace 19 output HDMI-A-1
-#workspace 20 output HDMI-A-1
+workspace 11 output HDMI-A-1
+workspace 12 output HDMI-A-1
+workspace 13 output HDMI-A-1
+workspace 14 output HDMI-A-1
+workspace 15 output HDMI-A-1
+workspace 16 output HDMI-A-1
+workspace 17 output HDMI-A-1
+workspace 18 output HDMI-A-1
+workspace 19 output HDMI-A-1
+workspace 20 output HDMI-A-1
 
 default_border none
 gaps inner 0
@@ -333,4 +335,6 @@ bar {
 	swaybar_command waybar
 }
 
+exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.95
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
