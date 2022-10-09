@@ -39,8 +39,6 @@ input * {
 		xkb_numlock enabled
     xkb_options compose:ralt
     tap enabled
-    scroll_method two_finger
-    natural_scroll enabled
 }
 
 #input * xkb_model "pc101"
