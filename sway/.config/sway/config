@@ -298,16 +298,16 @@ workspace 8 output   eDP-1
 workspace 9 output   eDP-1
 workspace 10 output  eDP-1
 
-#workspace 11 output HDMI-A-1
-#workspace 12 output HDMI-A-1
-#workspace 13 output HDMI-A-1
-#workspace 14 output HDMI-A-1
-#workspace 15 output HDMI-A-1
-#workspace 16 output HDMI-A-1
-#workspace 17 output HDMI-A-1
-#workspace 18 output HDMI-A-1
-#workspace 19 output HDMI-A-1
-#workspace 20 output HDMI-A-1
+workspace 11 output HDMI-A-1
+workspace 12 output HDMI-A-1
+workspace 13 output HDMI-A-1
+workspace 14 output HDMI-A-1
+workspace 15 output HDMI-A-1
+workspace 16 output HDMI-A-1
+workspace 17 output HDMI-A-1
+workspace 18 output HDMI-A-1
+workspace 19 output HDMI-A-1
+workspace 20 output HDMI-A-1
 
 default_border none
 gaps inner 0
