@@ -50,6 +50,7 @@ call SpaceVim#layers#load('lang#jsonet')
 call SpaceVim#layers#load('lang#rust')
 call SpaceVim#layers#load('lang#latex')
 call SpaceVim#layers#load('autocomplete')
+call SpaceVim#layers#load('fzf')
 call SpaceVim#layers#load('colorscheme')
 call SpaceVim#layers#load('shell')
 
