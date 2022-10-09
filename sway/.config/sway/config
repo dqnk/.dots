@@ -311,7 +311,7 @@ default_border none
 gaps inner 0
 #smart_gaps on
 
-exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.95
+exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.85
 
 exec gnome-keyring-daemon --start --components="ssh,secrets"
 
