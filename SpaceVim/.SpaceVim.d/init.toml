@@ -67,36 +67,23 @@ name = "lang#assembly"
 
 [[layers]]
 name = "lang#java"
-
 [[layers]]
 name = 'lang#c'
-
 [[layers]]
 name = 'lang#latex'
-
 [[layers]]
 name = 'lang#python'
-
 [[layers]]
 name = 'lang#java'
-
 [[layers]]
 name = 'lang#jsonet'
-
 [[layers]]
 name = 'lang#rust'
-
 [[layers]]
 name = 'lang#latex'
-
 [[layers]]
 name = 'fzf'
-
 [[layers]]
 name = 'colorscheme'
-
 [[layers]]
 name = 'shell'
-
-[[custom_plugins]]
-repo ='jasonccox/vim-wayland-clipboard'
