@@ -109,7 +109,7 @@ exec swayidle \
 # Start a terminal
 bindsym $mod+Return exec $term
 
-#bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome
+#bindsym $mod+b exec chromium --enable-features=WebUIDarkMode --force-dark-mode --password-store=gnome --force-device-scale-factor=2
 bindsym $mod+t exec kitty
 bindsym $mod+b exec firefox
 #bindsym $mod+b exec epiphany --new-window
@@ -334,7 +334,4 @@ bar {
 #    }
 	swaybar_command waybar
 }
-
-exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.95
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
