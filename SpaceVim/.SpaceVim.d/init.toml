@@ -11,24 +11,23 @@
 # set spacevim theme. by default colorscheme layer is not loaded,
 # if you want to use more colorscheme, please load the colorscheme
 # layer
-  colorscheme = "molokai"
-  colorscheme_bg = "dark"
-  # Disable guicolors in basic mode, many terminal do not support 24bit
-  # true colors
-  enable_guicolors = true
-  # Disable statusline separator, if you want to use other value, please
-  # install nerd fonts
-  statusline_separator = "arrow"
-  statusline_iseparator = "arrow"
-  buffer_index_type = 4
-  enable_tabline_filetype_icon = true
-  enable_statusline_mode = false
-  bootstrap_before = 'myspacevim#after'
-  enable_vimfiler_filetypeicon = true
-  enable_tabline_filetype_icon = true
-  statusline_separator = 'arrow'
-  default_indent = 4
-  expand_tab = true
+colorscheme = "molokai"
+colorscheme_bg = "dark"
+# Disable guicolors in basic mode, many terminal do not support 24bit
+# true colors
+enable_guicolors = true
+# Disable statusline separator, if you want to use other value, please
+# install nerd fonts
+statusline_separator = "arrow"
+buffer_index_type = 4
+enable_tabline_filetype_icon = true
+enable_statusline_mode = false
+bootstrap_before = 'myspacevim#after'
+enable_vimfiler_filetypeicon = true
+enable_tabline_filetype_icon = true
+statusline_separator = 'arrow'
+default_indent = 4
+expand_tab = true
 
 # Enable autocomplete layer
 [[layers]]
@@ -41,9 +40,6 @@ auto_completion_tab_key_behavior = "smart"
 name = 'shell'
 default_position = 'top'
 default_height = 30
-
-[[layers]]
-name = "colorscheme"
 
 [[layers]]
 name = "format"
@@ -68,3 +64,26 @@ name = "lang#latex"
 
 [[layers]]
 name = "lang#assembly"
+
+[[layers]]
+name = "lang#java"
+[[layers]]
+name = 'lang#c'
+[[layers]]
+name = 'lang#latex'
+[[layers]]
+name = 'lang#python'
+[[layers]]
+name = 'lang#java'
+[[layers]]
+name = 'lang#jsonet'
+[[layers]]
+name = 'lang#rust'
+[[layers]]
+name = 'lang#latex'
+[[layers]]
+name = 'fzf'
+[[layers]]
+name = 'colorscheme'
+[[layers]]
+name = 'shell'
