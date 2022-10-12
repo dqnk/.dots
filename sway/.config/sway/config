@@ -52,7 +52,7 @@ input * {
 #output * bg ~/Pictures/Wallpapers/deskwall.png fill
 #output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 output eDP-1 resolution 1920x1080 position 1920,0
-output * bg ~/Pictures/blue.png fill
+output * bg ~/Pictures/of.png fit #111111
 # Example configuration:
 #
 #
@@ -312,6 +312,7 @@ gaps inner 0
 
 exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.85
 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec gnome-keyring-daemon --start --components="ssh,secrets"
 
 
