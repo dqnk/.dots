@@ -10,12 +10,12 @@ function! myspacevim#after() abort
     let g:neoformat_enabled_typescript = ['clangformat']
     let g:neoformat_enabled_javascript = ['clangformat']
     let g:neoformat_enabled_java = ['clangformat']
+    let g:neoformat_enabled_rust = ['rustfmt']
     let g:neoformat_java_clangformat = {
                 \ 'exe': 'clang-format',
                 \ 'args': ["-style='{BreakAfterJavaFieldAnnotations: false, IndentWidth: 4}'", '-assume-filename=' . expand('%:t')],
                 \ 'stdin': 1,
                 \ }
-
     let g:neoformat_typescript_clangformat = {
                 \ 'exe': 'clang-format',
                 \ 'args': ['-style={IndentWidth: 4}', '-assume-filename=' . expand('%:t')],
