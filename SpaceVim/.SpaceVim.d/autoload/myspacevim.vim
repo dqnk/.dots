@@ -1,7 +1,8 @@
 function! myspacevim#after() abort
-
     autocmd BufNewFile *.cpp 0r ~/.SpaceVim.d/skeletons/cp.cpp
     autocmd BufNewFile *.tex 0r ~/.SpaceVim.d/skeletons/template.tex
+    autocmd BufEnter * set wrap
+
     let g:vimtex_view_general_viewer = 'zathura'
     let g:neoformat_enabled_c = ['clangformat']
     let g:neoformat_enabled_cpp = ['clangformat']
@@ -54,4 +55,5 @@ function! myspacevim#after() abort
     let g:spacevim_custom_plugins = [
                 \ ['tbodt/deoplete-tabnine', {'build': './install.sh'}],
                 \ ]
+
 endfunction
