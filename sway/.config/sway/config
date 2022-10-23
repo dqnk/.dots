@@ -30,14 +30,14 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 bindsym $mod+Space exec fuzzel
 
 input * {
-	xkb_layout us(dvorak),si
+	xkb_layout us
 		xkb_options "grp:win_space_toggle"
 		accel_profile flat
 		pointer_accel 0.000001
 		repeat_rate 40
 		repeat_delay 400
 		xkb_numlock enabled
-    xkb_options compose:ralt
+    xkb_options compose:rctrl
     tap enabled
 }
 
