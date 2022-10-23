@@ -29,15 +29,15 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 bindsym $mod+Space exec fuzzel
 
+
 input * {
 	xkb_layout us(dvorak),si
-		xkb_options "grp:win_space_toggle"
-		accel_profile flat
-		pointer_accel 0.000001
-		repeat_rate 40
-		repeat_delay 400
-		xkb_numlock enabled
-    xkb_options compose:ralt
+    xkb_options "grp:win_space_toggle,compose:ralt"
+    accel_profile flat
+    pointer_accel 0.000001
+    repeat_rate 40
+    repeat_delay 400
+    xkb_numlock enabled
     tap enabled
     natural_scroll enabled
 }
@@ -51,10 +51,10 @@ input * {
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg ~/Pictures/Wallpapers/deskwall.png fill
 #output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
-output * bg ~/Pictures/blue.png fill
+output eDP-1 resolution 1920x1080 position 1920,0
+output * bg ~/Pictures/of.png fit #111111
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 #output DVI-D-1 mode 1680x1050@60Hz pos 1920 0
@@ -295,16 +295,16 @@ workspace 8 output   eDP-1
 workspace 9 output   eDP-1
 workspace 10 output  eDP-1
 
-workspace 11 output HDMI-A-1
-workspace 12 output HDMI-A-1
-workspace 13 output HDMI-A-1
-workspace 14 output HDMI-A-1
-workspace 15 output HDMI-A-1
-workspace 16 output HDMI-A-1
-workspace 17 output HDMI-A-1
-workspace 18 output HDMI-A-1
-workspace 19 output HDMI-A-1
-workspace 20 output HDMI-A-1
+#workspace 11 output HDMI-A-1
+#workspace 12 output HDMI-A-1
+#workspace 13 output HDMI-A-1
+#workspace 14 output HDMI-A-1
+#workspace 15 output HDMI-A-1
+#workspace 16 output HDMI-A-1
+#workspace 17 output HDMI-A-1
+#workspace 18 output HDMI-A-1
+#workspace 19 output HDMI-A-1
+#workspace 20 output HDMI-A-1
 
 default_border none
 gaps inner 0
@@ -312,6 +312,7 @@ gaps inner 0
 
 exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.85
 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec gnome-keyring-daemon --start --components="ssh,secrets"
 
 
