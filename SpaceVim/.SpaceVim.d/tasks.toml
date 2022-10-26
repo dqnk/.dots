@@ -1,0 +1,12 @@
+[cargo-build]
+    command = 'cargo build'
+    isBackground = true
+[cargo-debug]
+    command = 'cargo run build'
+[docker-dev]
+    command = 'docker compose up --build'
+    isBackground = true
+[docker-stop]
+    command = 'docker compose down'
+[k8s-all]
+    command = 'kubectl apply -f ${workspaceFolder}/k8s'
