@@ -10,3 +10,9 @@
     command = 'docker compose down'
 [k8s-all]
     command = 'kubectl apply -f ${workspaceFolder}/k8s'
+[minikube-start]
+    command = 'minikube start'
+    isBackground = true
+[minikube-stop]
+    command = 'minikube stop'
+    isBackground = true
