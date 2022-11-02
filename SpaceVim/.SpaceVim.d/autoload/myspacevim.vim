@@ -3,6 +3,7 @@ function! myspacevim#after() abort
     autocmd BufNewFile *.tex 0r ~/.SpaceVim.d/skeletons/template.tex
     autocmd BufEnter * set wrap
 
+    let g:rainbow_active = 1
     let g:vimtex_view_general_viewer = 'zathura'
     let g:neoformat_enabled_c = ['clangformat']
     let g:neoformat_enabled_cpp = ['clangformat']

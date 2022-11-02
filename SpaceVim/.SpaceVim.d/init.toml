@@ -87,3 +87,5 @@ name = 'fzf'
 name = 'colorscheme'
 [[layers]]
 name = 'shell'
+[[layers]]
+name = 'tools'
