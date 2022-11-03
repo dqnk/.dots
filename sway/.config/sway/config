@@ -113,7 +113,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+t exec kitty
 bindsym $mod+b exec firefox
 #bindsym $mod+b exec epiphany --new-window
-bindsym $mod+g exec kitty -e nvim
+bindsym $mod+g exec neovide
 bindsym $mod+v exec code --ozone-platform=wayland
 bindsym $mod+i exec insomnia --ozone-platform=wayland
 bindsym $mod+m bar mode toggle
