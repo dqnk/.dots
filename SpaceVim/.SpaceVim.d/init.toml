@@ -98,6 +98,9 @@ name = 'colorscheme'
 [[layers]]
 name = 'shell'
 
+[[layers]]
+name = 'tools'
+
 [[custom_plugins]]
 repo ='jasonccox/vim-wayland-clipboard'
 
