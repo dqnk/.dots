@@ -87,5 +87,19 @@ name = 'fzf'
 name = 'colorscheme'
 [[layers]]
 name = 'shell'
+
 [[layers]]
 name = 'tools'
+
+[[custom_plugins]]
+repo ='jasonccox/vim-wayland-clipboard'
+
+[[layers]]
+name = 'lsp'
+enabled_clients = ['rust_analyzer', 'pylsp', 'clangd']
+filetypes = ['rust', 'python']
+[layers.override_client_cmds]
+rust_analyzer=['rust-analyzer']
+
+[layers.override_cmd]
+rust=['rust-analyzer']
