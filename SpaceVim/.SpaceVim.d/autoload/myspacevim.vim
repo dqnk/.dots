@@ -1,3 +1,6 @@
+function! myspacevim#before() abort
+    call javacomplete#server#Compile()
+endfunction
 function! myspacevim#after() abort
     autocmd BufNewFile *.cpp 0r ~/.SpaceVim.d/skeletons/cp.cpp
     autocmd BufNewFile *.tex 0r ~/.SpaceVim.d/skeletons/template.tex

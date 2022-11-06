@@ -28,6 +28,9 @@ enable_tabline_filetype_icon = true
 statusline_separator = 'arrow'
 default_indent = 4
 expand_tab = true
+enable_projects_cache = true
+projects_cache_num = 100
+disabled_plugins=['vim-javacomplete2']
 
 # Enable autocomplete layer
 [[layers]]
@@ -76,9 +79,6 @@ name = 'lang#latex'
 
 [[layers]]
 name = 'lang#python'
-
-[[layers]]
-name = 'lang#java'
 
 [[layers]]
 name = 'lang#jsonet'
