@@ -22,26 +22,26 @@ statusline_separator = "arrow"
 buffer_index_type = 4
 enable_tabline_filetype_icon = true
 enable_statusline_mode = false
-bootstrap_before = 'myspacevim#after'
+bootstrap_before = "myspacevim#after"
 enable_vimfiler_filetypeicon = true
 enable_tabline_filetype_icon = true
-statusline_separator = 'arrow'
+statusline_separator = "arrow"
 default_indent = 4
 expand_tab = true
 enable_projects_cache = true
 projects_cache_num = 100
-disabled_plugins=['vim-javacomplete2']
+disabled_plugins=["vim-javacomplete2"]
 
 # Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
+name = "autocomplete"
 autocomplete_method = "deoplete"
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
-name = 'shell'
-default_position = 'top'
+name = "shell"
+default_position = "top"
 default_height = 30
 
 [[layers]]
@@ -51,7 +51,7 @@ format_on_save = true
 
 [[layers]]
 name = "git"
-git_plugin = 'git'
+git_plugin = "git"
 
 [[layers]]
 name = "lang#c"
@@ -72,44 +72,45 @@ name = "lang#assembly"
 name = "lang#java"
 
 [[layers]]
-name = 'lang#c'
+name = "lang#c"
 
 [[layers]]
-name = 'lang#latex'
+name = "lang#latex"
 
 [[layers]]
-name = 'lang#python'
+name = "lang#python"
 
 [[layers]]
-name = 'lang#jsonet'
+name = "lang#jsonet"
 
 [[layers]]
-name = 'lang#rust'
+name = "lang#rust"
 
 [[layers]]
-name = 'lang#latex'
+name = "lang#latex"
 
 [[layers]]
-name = 'fzf'
+name = "fzf"
 
 [[layers]]
-name = 'colorscheme'
+name = "colorscheme"
 
 [[layers]]
-name = 'shell'
+name = "shell"
 
 [[layers]]
-name = 'tools'
+name = "tools"
 
 [[custom_plugins]]
-repo ='jasonccox/vim-wayland-clipboard'
+repo ="jasonccox/vim-wayland-clipboard"
 
 [[layers]]
-name = 'lsp'
-enabled_clients = ['rust_analyzer', 'pylsp', 'clangd']
-filetypes = ['rust', 'python']
+name = "lsp"
+enabled_clients = ["rust_analyzer", "pylsp", "clangd"]
+filetypes = ["rust", "python", "javascript", "typescript", "html", "typescriptreact", "typescript.tsx" ]
 [layers.override_client_cmds]
-rust_analyzer=['rust-analyzer']
+rust_analyzer=["rust-analyzer"]
+typescript=["typescript-language-server", "--stdio"]
 
 [layers.override_cmd]
-rust=['rust-analyzer']
+rust=["rust-analyzer"]
