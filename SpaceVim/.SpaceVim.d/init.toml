@@ -30,7 +30,6 @@ default_indent = 4
 expand_tab = true
 enable_projects_cache = true
 projects_cache_num = 100
-disabled_plugins=["vim-javacomplete2"]
 
 # Enable autocomplete layer
 [[layers]]
@@ -90,6 +89,12 @@ name = "lang#rust"
 name = "lang#latex"
 
 [[layers]]
+name = "lang#typescript"
+
+[[layers]]
+name = "lang#javascript"
+
+[[layers]]
 name = "fzf"
 
 [[layers]]
@@ -107,10 +112,9 @@ repo ="jasonccox/vim-wayland-clipboard"
 [[layers]]
 name = "lsp"
 enabled_clients = ["rust_analyzer", "pylsp", "clangd"]
-filetypes = ["rust", "python", "javascript", "typescript", "html", "typescriptreact", "typescript.tsx" ]
+filetypes = ["rust", "python", "javascript", "html", "typescript", "typescriptreact", "typescript.tsx" ]
 [layers.override_client_cmds]
 rust_analyzer=["rust-analyzer"]
-typescript=["typescript-language-server", "--stdio"]
 
 [layers.override_cmd]
 rust=["rust-analyzer"]
