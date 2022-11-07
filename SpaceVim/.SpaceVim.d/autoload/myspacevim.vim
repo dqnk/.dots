@@ -12,20 +12,8 @@ function! myspacevim#after() abort
     let g:neoformat_enabled_cpp = ['clangformat']
     let g:neoformat_enabled_cuda = ['clangformat']
     let g:neoformat_enabled_python = ['black']
-    let g:neoformat_enabled_typescript = ['clangformat']
-    let g:neoformat_enabled_javascript = ['clangformat']
     let g:neoformat_enabled_java = ['astyle']
     let g:neoformat_enabled_rust = ['rustfmt']
-    let g:neoformat_typescript_clangformat = {
-                \ 'exe': 'clang-format',
-                \ 'args': ['-style={IndentWidth: 4}', '-assume-filename=' . expand('%:t')],
-                \ 'stdin': 1,
-                \ }
-    let g:neoformat_javascript_clangformat = {
-                \ 'exe': 'clang-format',
-                \ 'args': ['-style={IndentWidth: 4}', '-assume-filename=' . expand('%:t')],
-                \ 'stdin': 1,
-                \ }
     let g:neoformat_cpp_clangformat = {
                 \ 'exe': 'clang-format',
                 \ 'args': ['-style=Google', '-assume-filename=' . expand('%:t')],
