@@ -14,6 +14,8 @@ function! myspacevim#after() abort
     let g:neoformat_enabled_python = ['black']
     let g:neoformat_enabled_java = ['astyle']
     let g:neoformat_enabled_rust = ['rustfmt']
+    let g:neoformat_enabled_typescript=['prettier']
+    let g:neoformat_enabled_javascript=['prettier']
     let g:neoformat_cpp_clangformat = {
                 \ 'exe': 'clang-format',
                 \ 'args': ['-style=Google', '-assume-filename=' . expand('%:t')],
