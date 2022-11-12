@@ -95,6 +95,9 @@ name = "lang#typescript"
 name = "lang#javascript"
 
 [[layers]]
+name = "lang#html"
+
+[[layers]]
 name = "fzf"
 
 [[layers]]
@@ -112,7 +115,7 @@ repo ="jasonccox/vim-wayland-clipboard"
 [[layers]]
 name = "lsp"
 enabled_clients = ["rust_analyzer", "pylsp", "clangd"]
-filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact"]
+filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact", "html"]
 [layers.override_client_cmds]
 rust_analyzer=["rust-analyzer"]
 
