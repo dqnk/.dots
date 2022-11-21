@@ -18,18 +18,17 @@ function! myspacevim#after() abort
     let g:neoformat_enabled_javascript=['prettier']
     let g:neoformat_cpp_clangformat = {
                 \ 'exe': 'clang-format',
-                \ 'args': ['-style=Google', '-assume-filename=' . expand('%:t')],
+                \ 'args': ['-style=Google', '-assume-filename='.expand('%:t')],
                 \ 'stdin': 1,
                 \ }
     let g:neoformat_c_clangformat = {
                 \ 'exe': 'clang-format',
-                \ 'args': ['-style=Google', '-assume-filename=' . expand('%:t')],
+                \ 'args': ['-style=Google', '-assume-filename='.expand('%:t')],
                 \ 'stdin': 1,
                 \ }
     let g:neoformat_cuda_clangformat = {
                 \ 'exe': 'clang-format',
-                \ 'args': ['-style=Google', '-assume-filename=' . expand('%:t')],
-                \ 'stdin': 1,
+                \ 'args': ['-style=Google', '-assume-filename='.expand('%:t')],
                 \ }
     let g:neomake_c_enabled_makers = ['clang']
     let g:neomake_c_clang_maker = {
