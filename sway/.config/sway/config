@@ -118,6 +118,8 @@ bindsym $mod+d exec discord --disable-gpu
 bindsym $mod+c exec gnome-calculator
 bindsym $mod+w exec libreoffice --writer
 bindsym $mod+f exec nautilus
+# this requires slurp and grim to be installed
+bindsym $mod+Shift+s exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
 # Kill focused window
 bindsym $mod+Shift+c kill
