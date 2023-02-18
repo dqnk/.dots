@@ -336,6 +336,4 @@ bar {
 	swaybar_command waybar
 }
 
-exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.95
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-
