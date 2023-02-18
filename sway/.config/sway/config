@@ -335,3 +335,4 @@ bar {
 	swaybar_command waybar
 }
 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
