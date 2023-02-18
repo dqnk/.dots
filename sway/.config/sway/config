@@ -314,7 +314,6 @@ gaps inner 0
 
 exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.85
 
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec gnome-keyring-daemon --start --components="ssh,secrets"
 
 
