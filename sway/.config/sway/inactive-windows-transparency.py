@@ -7,7 +7,7 @@ for window in ipc.get_tree():
     if window.focused:
         prev_focused = window
     else:
-        window.command("opacity 0.8")
+        window.command("opacity 0.875")
 
 
 def on_window_focus(ipc, focused):
@@ -16,7 +16,7 @@ def on_window_focus(ipc, focused):
         focused.container.id != prev_focused.id
     ):  # https://github.com/swaywm/sway/issues/2859
         focused.container.command("opacity 1")
-        prev_focused.command("opacity 0.8")
+        prev_focused.command("opacity 0.875")
         prev_focused = focused.container
 
 
