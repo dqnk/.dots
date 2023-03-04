@@ -18,26 +18,26 @@ function! myspacevim#after() abort
     let g:neoformat_enabled_javascript=['prettier']
     let g:neoformat_cpp_clangformat = {
                 \ 'exe': 'clang-format',
-                \ 'args': ['-style=Google', '-assume-filename='.expand('%:t')],
+                \ 'args': ['-style=file', '-fallback-style=Google'],
                 \ 'stdin': 1,
                 \ }
     let g:neoformat_c_clangformat = {
                 \ 'exe': 'clang-format',
-                \ 'args': ['-style=Google', '-assume-filename='.expand('%:t')],
+                \ 'args': ['-style=file', '-fallback-style=Google'],
                 \ 'stdin': 1,
                 \ }
     let g:neoformat_cuda_clangformat = {
                 \ 'exe': 'clang-format',
-                \ 'args': ['-style=Google', '-assume-filename='.expand('%:t')],
+                \ 'args': ['-style=file', '-fallback-style=Google'],
                 \ }
     let g:neomake_c_enabled_makers = ['clang']
     let g:neomake_c_clang_maker = {
-                \ 'args': ['-Wall', '-Wextra', '-Weverything'],
+                \ 'args': ['-Wall', '-Wextra', '-O2', '-Weverything'],
                 \ }
     let g:neomake_cpp_enabled_makers = ['clang']
     let g:neomake_cpp_clang_maker = {
                 \ 'exe': 'clang++',
-                \ 'args': ['-Wall', '-Wextra', -'O2', '-Wno-sign-conversion'],
+                \ 'args': ['-Wall', '-Wextra', '-O2', 'Weverything'],
                 \ }
     let g:spacevim_autocomplete_method = 'deoplete'
     let g:spacevim_custom_plugins = [
