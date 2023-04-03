@@ -1,6 +1,7 @@
 function! myspacevim#before() abort
-    call javacomplete#server#Compile()
+    let g:mapleader = '-'
 endfunction
+
 function! myspacevim#after() abort
     autocmd BufNewFile *.cpp 0r ~/.SpaceVim.d/skeletons/cp.cpp
     autocmd BufNewFile *.tex 0r ~/.SpaceVim.d/skeletons/template.tex
