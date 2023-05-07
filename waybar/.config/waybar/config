@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "layer": "bottom",
         "modules-left": ["sway/workspaces"],
         "modules-center": ["clock"],
@@ -87,4 +88,107 @@
         "sway/language": {
             "format": "{}"
         }
+=======
+	"layer": "bottom",
+		"modules-left": ["sway/workspaces"],
+		"modules-center": ["clock"],
+		"modules-right":
+			["battery","custom/playerctl","custom/weather","memory","temperature",
+		"custom/nvidia-temperature","sway/language","pulseaudio","tray"],
+		"sway/workspaces": {
+			"disable-scroll": true,
+			"all-outputs": true,
+			"format": "{index}: {icon}",
+			"format-icons": {
+				"1":"",
+				"2":"",
+				"3":"",
+				"4":"",
+				"5":"",
+				"6":"",
+				"7":"",
+				"8":"",
+				"9":"",
+				"10":"",
+				"urgent": "",
+				"focused": "",
+				"default": ""
+			}
+		},
+		"sway/window": {
+			"max-length": 50,
+			"tooltip": false
+		},
+		"clock": {
+			"format": "{:%d %b %Y %H:%M:%S}",
+			"format-alt": "{:%d-%m-%Y %H:%M:%S}",
+			"tooltip": false,
+			"interval": 1
+		},
+		"memory": {
+			"format": " {used:0.2f}G/{total:0.2f}G",
+			"interval": 1
+		},
+		"battery": {
+			"interval": 60,
+			"states": {
+				"good": 100,
+				"warning": 25,
+				"critical": 10
+			},
+			"format": "{icon} {capacity}%",
+			"format-icons": ["", "", "", "", ""],
+			"tooltip": false
+		},
+		"network": {
+			"format-wifi": " {essid} ({signalStrength}%)",
+			"format-ethernet": "{bandwidthDownBits} {bandwidthUpBits}",
+			"format-disconnected": "⚠ Disconnected",
+			"interval": 1,
+			"tooltip": false
+		},
+		"pulseaudio": {
+			"format": "{icon} {volume}%",
+			"format-bluetooth": "{icon} {volume}%",
+			"format-muted": "",
+			"format-icons": {
+				"headphones": "",
+				"handsfree": "",
+				"headset": "",
+				"phone": "",
+				"portable": "",
+				"car": "",
+				"default": ["", ""]
+			},
+			"tooltip": false
+		},
+		"custom/weather": {
+			"format": "{}",
+			"exec": "curl 'https://wttr.in/Ljubljana?format=1'",
+			"interval": 600
+		},
+		"temperature": {
+			"hwmon-path":"/sys/class/hwmon/hwmon1/temp1_input",
+			"format": " {temperatureC}°C ",
+			"interval": 4
+		},
+		"custom/nvidia-temperature": {
+			"format": "﬙ {}°C ",
+			"max-length":40,
+			"restart-interval": 1,
+			"exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader",
+			"return-type": "csv",
+			"tooltip": false
+		},
+		"custom/playerctl": {
+			"format": " {}",
+			"max-length": 25,
+			"interval": 5,
+			"exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
+			"tooltip": false
+		},
+		"sway/language": {
+			"format": "{}"
+		}
+>>>>>>> 1ee2a20 (font fix)
 }
