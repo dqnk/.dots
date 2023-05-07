@@ -4,7 +4,7 @@
 		"modules-center": ["clock"],
 		"modules-right":
 			["battery","custom/playerctl","custom/weather","memory","temperature",
-		"custom/nvidia-temperature","sway/language","pulseaudio","tray"],
+		"sway/language","pulseaudio","tray"],
 		"sway/workspaces": {
 			"disable-scroll": true,
 			"all-outputs": true,
@@ -36,7 +36,7 @@
 			"interval": 1
 		},
 		"memory": {
-			"format": " {used:0.2f}G/{total:0.2f}G",
+			"format": "{used:0.2f}G/{total:0.2f}G",
 			"interval": 1
 		},
 		"battery": {
@@ -98,6 +98,6 @@
 			"tooltip": false
 		},
 		"sway/language": {
-			"format": "{}"
+			"format": " {}"
 		}
 }
