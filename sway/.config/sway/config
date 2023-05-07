@@ -52,7 +52,7 @@ input * {
 #output * bg ~/Pictures/Wallpapers/deskwall.png fill
 #output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 output eDP-1 resolution 1920x1080 position 1920,0
-output * bg ~/Pictures/blue.png fit #111111
+output * bg ~/Pictures/Wallpapers/dark.png fill
 # Example configuration:
 #
 #
