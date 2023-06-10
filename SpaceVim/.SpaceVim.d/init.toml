@@ -30,7 +30,7 @@ statusline_separator = "arrow"
 default_indent = 8
 expand_tab = true
 enable_projects_cache = true
-projects_cache_num = 100
+projects_cache_num = 50
 
 # Enable autocomplete layer
 [[layers]]
@@ -97,6 +97,10 @@ name = "lang#javascript"
 
 [[layers]]
 name = "lang#html"
+
+#it is crucial that telescope is after fzf
+[[layers]]
+name="fzf"
 
 [[layers]]
 name = "telescope"
