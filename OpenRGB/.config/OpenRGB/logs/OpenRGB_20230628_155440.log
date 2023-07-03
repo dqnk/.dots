@@ -1,0 +1,37 @@
+    OpenRGB v0.8
+    Commit:  from 
+    Launched: 20230628_155440
+====================================================================================================
+
+1002  |Info:    Saving detector settings
+1003  |Info:    ------------------------------------------------------
+1003  |Info:    |               Start device detection               |
+1003  |Info:    ------------------------------------------------------
+1003  |Info:    Initializing HID interfaces: Success
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    |             Detecting I2C interfaces               |
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:21C4 Subsystem: 10DE:13D3
+1008  |Info:    Registering I2C interface: /dev/i2c-1 Device 1022:790B Subsystem: 1462:7C02
+1008  |Info:    Registering I2C interface: /dev/i2c-6 Device 10DE:21C4 Subsystem: 10DE:13D3
+1008  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:21C4 Subsystem: 10DE:13D3
+1008  |Info:    Registering I2C interface: /dev/i2c-2 Device 1022:790B Subsystem: 1462:7C02
+1008  |Info:    Registering I2C interface: /dev/i2c-0 Device 1022:790B Subsystem: 1462:7C02
+1008  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:21C4 Subsystem: 10DE:13D3
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    |               Detecting I2C devices                |
+1008  |Info:    ------------------------------------------------------
+1702  |Info:    ------------------------------------------------------
+1702  |Info:    |               Detecting I2C PCI devices            |
+1702  |Info:    ------------------------------------------------------
+1703  |Info:    ------------------------------------------------------
+1703  |Info:    |               Detecting HID devices                |
+1703  |Info:    ------------------------------------------------------
+1714  |Info:    [Razer Deathadder Essential] Registering RGB controller
+1714  |Info:    ------------------------------------------------------
+1714  |Info:    |              Detecting other devices               |
+1714  |Info:    ------------------------------------------------------
+1719  |Info:    ------------------------------------------------------
+1719  |Info:    |                Detection completed                 |
+1719  |Info:    ------------------------------------------------------
+5309  |Info:    Profile loading: FAILED! for Razer Deathadder Essential @ HID: /dev/hidraw0
