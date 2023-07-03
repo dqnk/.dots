@@ -112,6 +112,9 @@ name = "colorscheme"
 name = "shell"
 
 [[layers]]
+name = "treesitter"
+
+[[layers]]
 name = "tools"
 
 [[custom_plugins]]
