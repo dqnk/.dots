@@ -5,4 +5,4 @@ or set -gx OMF_PATH "$HOME/.local/share/omf"
 
 # Load Oh My Fish configuration.
 source $OMF_PATH/init.fish
-fzf_configure_bindings --directory=\cf
+fzf_configure_bindings --directory=\cf --variable

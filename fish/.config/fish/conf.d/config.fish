@@ -8,8 +8,6 @@ alias yay='paru'
 alias dub="docker compose up --build"
 fish_vi_key_bindings
 
-
-
 fish_add_path /opt/cuda/bin
 fish_add_path ~/.local/bin/
 fish_add_path ~/.cargo/bin/
