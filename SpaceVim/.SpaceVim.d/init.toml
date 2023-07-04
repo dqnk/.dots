@@ -123,7 +123,7 @@ repo ="jasonccox/vim-wayland-clipboard"
 [[layers]]
 name = "lsp"
 #nvim
-enabled_clients = ["rust_analyzer", "pylsp", "clangd", "tsserver", "svelte", "angularls", "html", "cssls", "dockerls", "java_language_server"]
+enabled_clients = ["rust_analyzer", "pylsp", "clangd", "tsserver", "svelte", "angularls", "html", "cssls", "dockerls", "java_language_server", "ruby_ls"]
 #vim
 filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact", "svelte"]
 
