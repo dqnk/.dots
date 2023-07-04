@@ -89,11 +89,11 @@ name = "lang#rust"
 [[layers]]
 name = "lang#latex"
 
-[[layers]]
-name = "lang#typescript"
+#[[layers]]
+#name = "lang#typescript"
 
-[[layers]]
-name = "lang#javascript"
+#[[layers]]
+#name = "lang#javascript"
 
 [[layers]]
 name = "lang#html"
@@ -122,8 +122,10 @@ repo ="jasonccox/vim-wayland-clipboard"
 
 [[layers]]
 name = "lsp"
-enabled_clients = ["rust_analyzer", "pylsp", "clangd"]
-filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact"]
+#nvim
+enabled_clients = ["rust_analyzer", "pylsp", "clangd", "tsserver", "svelte", "angularls", "html", "cssls", "dockerls", "java_language_server"]
+#vim
+filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact", "svelte"]
 
 [layers.override_cmd]
 rust=["rust-analyzer"]
