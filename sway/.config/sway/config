@@ -330,6 +330,8 @@ bar {
 #    }
         swaybar_command waybar
 }
-bindswitch lid:on output "eDP-1" disable
-bindswitch lid:off output "eDP-1" enable
+
+bindswitch --reload --locked lid:on output "eDP-1" disable
+bindswitch --reload --locked lid:off output "eDP-1" enable
+
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
