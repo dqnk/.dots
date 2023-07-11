@@ -35,6 +35,9 @@ input * {
         tap enabled
         natural_scroll enabled
 }
+input 1133:45091:Logitech_Wireless_Mouse_MX_Master_3 {
+        natural_scroll enabled
+}
 
 #input * xkb_model "pc101"
 #bindswitch --reload --locked lid:on output $laptop disable
