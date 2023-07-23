@@ -14,6 +14,7 @@ fish_add_path ~/.cargo/bin/
 
 set QT_QPA_PLATFORMTHEME qt5ct
 set EDITOR nvim
+set GOPATH .local/go
 set VISUAL nvim
 set WLR_NO_HARDWARE_CURSORS 1
 set NODE_OPTIONS --max_old_space_size=8192
