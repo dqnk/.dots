@@ -1,7 +1,6 @@
 package config
 package https://github.com/PatrickF1/fzf.fish
 package spark
-package vcs
 theme bobthefish
 theme chain
 theme default
