@@ -94,7 +94,7 @@ name = "lang#javascript"
 name = "lang#html"
 
 [[layers]]
-  name = "lang#vim"
+name = "lang#vim"
 
 #it is crucial that telescope is after fzf
 [[layers]]
