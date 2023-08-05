@@ -78,9 +78,6 @@ name = "lang#c"
 name = "lang#latex"
 
 [[layers]]
-name = "lang#python"
-
-[[layers]]
 name = "lang#jsonet"
 
 [[layers]]
@@ -97,6 +94,9 @@ name = "lang#javascript"
 
 [[layers]]
 name = "lang#html"
+
+[[layers]]
+  name = "lang#vim"
 
 #it is crucial that telescope is after fzf
 [[layers]]
@@ -123,7 +123,7 @@ repo ="jasonccox/vim-wayland-clipboard"
 [[layers]]
 name = "lsp"
 #nvim
-enabled_clients = ["rust_analyzer", "pylsp", "clangd", "tsserver", "html", "cssls", "dockerls", "java_language_server", "ruby_ls"]
+enabled_clients = ["rust_analyzer", "pylsp", "clangd", "tsserver", "html", "cssls", "dockerls", "java_language_server", "ruby_ls", "vimls"]
 #vim
 filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact", "svelte"]
 
