@@ -121,9 +121,6 @@ repo ="jasonccox/vim-wayland-clipboard"
 [[layers]]
 name = "lsp"
 #nvim
-enabled_clients = ["rust_analyzer", "pylsp", "clangd", "tsserver", "html", "cssls", "dockerls", "java_language_server", "ruby_ls", "vimls"]
+enabled_clients = ["jdtls", "rust_analyzer", "pylsp", "clangd", "tsserver", "html", "cssls", "dockerls","ruby_ls", "vimls"]
 #vim
-filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact", "svelte"]
-
-[layers.override_cmd]
-rust=["rust-analyzer"]
+filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact", "svelte" ]
