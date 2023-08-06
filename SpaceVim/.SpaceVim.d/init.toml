@@ -115,6 +115,9 @@ name = "treesitter"
 [[layers]]
 name = "tools"
 
+[[layers]]
+name="debug"
+
 [[custom_plugins]]
 repo ="jasonccox/vim-wayland-clipboard"
 
