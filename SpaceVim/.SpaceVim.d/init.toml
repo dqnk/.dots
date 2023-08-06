@@ -124,3 +124,6 @@ name = "lsp"
 enabled_clients = ["jdtls", "rust_analyzer", "pylsp", "clangd", "tsserver", "html", "cssls", "dockerls","ruby_ls", "vimls"]
 #vim
 filetypes = ["rust", "python", "javascript", "typescript", "typescriptreact", "svelte" ]
+
+[layers.override_client_cmds]
+    jdtls = ["jdtls", "-configuration", "~/.cache/jdtls/config", "-data", "~/.cache/jdtls/workspace"]
