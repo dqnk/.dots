@@ -32,9 +32,7 @@ projects_cache_num = 50
 
 [[layers]]
 name = "core"
-enable_smooth_scrolling = true
 enable_filetree_gitstatus=true
-enable_filetree_filetypeicon = true
 
 # Enable autocomplete layer
 [[layers]]
