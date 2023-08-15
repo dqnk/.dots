@@ -30,6 +30,12 @@ expand_tab = true
 enable_projects_cache = true
 projects_cache_num = 50
 
+[[layers]]
+name = "core"
+enable_smooth_scrolling = true
+enable_filetree_gitstatus=true
+enable_filetree_filetypeicon = true
+
 # Enable autocomplete layer
 [[layers]]
 name = "autocomplete"
@@ -118,8 +124,14 @@ name = "tools"
 [[layers]]
 name="debug"
 
+[[layers]]
+name="sudo"
+
 [[custom_plugins]]
 repo ="jasonccox/vim-wayland-clipboard"
+
+[[custom_plugins]]
+repo="ryanoasis/vim-devicons"
 
 [[layers]]
 name = "lsp"
