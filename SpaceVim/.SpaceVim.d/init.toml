@@ -29,6 +29,7 @@ default_indent = 8
 expand_tab = true
 enable_projects_cache = true
 projects_cache_num = 50
+sidebar_width=40
 
 [[layers]]
 name = "core"
