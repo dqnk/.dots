@@ -3,7 +3,6 @@ end
 
 alias ls='ls --color=auto'
 alias v='nvim'
-alias sudo='doas'
 alias yay='paru'
 alias dub="docker compose up --build"
 fish_vi_key_bindings
