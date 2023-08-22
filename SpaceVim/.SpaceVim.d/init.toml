@@ -101,6 +101,9 @@ name = "lang#html"
 [[layers]]
 name = "lang#vim"
 
+[[layers]]
+name = "lang#ipynb"
+
 #it is crucial that telescope is after fzf
 [[layers]]
 name="fzf"

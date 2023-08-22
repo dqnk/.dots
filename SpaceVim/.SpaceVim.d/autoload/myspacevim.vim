@@ -1,4 +1,5 @@
 function! myspacevim#before() abort
+        autocmd VimEnter * TSEnable highlight
         let g:mapleader = '-'
 endfunction
 
