@@ -1,6 +1,7 @@
 function! myspacevim#before() abort
         autocmd VimEnter * TSEnable highlight
         let g:mapleader = '-'
+        set timeoutlen=500
 endfunction
 
 function! myspacevim#after() abort
@@ -13,11 +14,12 @@ function! myspacevim#after() abort
         highlight EndOfBuffer guibg=NONE ctermbg=NONE
 
         let g:rainbow_active = 1
+        let g:neoformat_run_all_formatters = 1
         let g:vimtex_view_general_viewer = 'zathura'
         let g:neoformat_enabled_c = ['clangformat']
         let g:neoformat_enabled_cpp = ['clangformat']
         let g:neoformat_enabled_cuda = ['clangformat']
-        let g:neoformat_enabled_python = ['black']
+        let g:neoformat_enabled_python = ['isort', 'black']
         let g:neoformat_enabled_java = ['astyle']
         let g:neoformat_enabled_rust = ['rustfmt']
         let g:neoformat_enabled_typescript=['prettier']
