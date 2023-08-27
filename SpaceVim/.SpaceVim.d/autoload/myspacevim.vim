@@ -5,7 +5,7 @@ function! myspacevim#before() abort
 endfunction
 
 function! myspacevim#after() abort
-        lua require('chatgpt').setup({api_key_cmd="test",})
+        lua require('chatgpt').setup({api_key_cmd = "gpg --decrypt " .. os.getenv("HOME") .. "/.openai-secret.txt.gpg"})
 
         autocmd BufNewFile *.cpp 0r ~/.SpaceVim.d/skeletons/cp.cpp
         autocmd BufNewFile *.tex 0r ~/.SpaceVim.d/skeletons/template.tex
