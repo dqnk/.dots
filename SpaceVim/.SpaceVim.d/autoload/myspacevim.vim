@@ -5,6 +5,8 @@ function! myspacevim#before() abort
 endfunction
 
 function! myspacevim#after() abort
+        lua require('chatgpt').setup({api_key_cmd="test",})
+
         autocmd BufNewFile *.cpp 0r ~/.SpaceVim.d/skeletons/cp.cpp
         autocmd BufNewFile *.tex 0r ~/.SpaceVim.d/skeletons/template.tex
         autocmd BufEnter * set wrap
@@ -12,6 +14,7 @@ function! myspacevim#after() abort
         highlight Normal guibg=NONE ctermbg=NONE
         highlight NonText guibg=NONE ctermbg=NONE
         highlight EndOfBuffer guibg=NONE ctermbg=NONE
+
 
         let g:rainbow_active = 1
         let g:neoformat_run_all_formatters = 1
