@@ -135,6 +135,34 @@ repo ="jasonccox/vim-wayland-clipboard"
 [[custom_plugins]]
 repo="ryanoasis/vim-devicons"
 
+[[custom_plugins]]
+repo="MunifTanjim/nui.nvim"
+
+
+[[custom_plugins]]
+name = "jackMort/ChatGPT.nvim"
+#  merged = false
+
+#what do I need?
+#  [custom_plugins.location]
+#    scheme = "https"
+#    domain = "github.com"
+#    owner = "jackMort"
+#    repo = "ChatGPT.nvim.git"
+#
+#  hook_add = '''
+#    function! ChatGPTSetup() abort
+#        call dein#set_var('chatgpt#config', {'my_api_key': 'aoeuaoeu'})
+#    endfunction
+#
+#    function! Config() abort
+#        call ChatGPTSetup()
+#    endfunction
+#  '''
+#
+#  depends = ["nui.nvim", "plenary.nvim", "telescope.nvim"]
+
+
 [[layers]]
 name = "lsp"
 #nvim
