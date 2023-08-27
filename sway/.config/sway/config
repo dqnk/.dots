@@ -311,7 +311,7 @@ gaps inner 0
 
 exec /usr/bin/python $HOME/.config/sway/inactive-windows-transparency.py -o 0.85
 
-exec gnome-keyring-daemon --start --components="ssh,secrets"
+exec gnome-keyring-daemon --start --components="pkcs11,ssh,secrets"
 
 
 # Read `man 5 sway-bar` for more information about this section.
