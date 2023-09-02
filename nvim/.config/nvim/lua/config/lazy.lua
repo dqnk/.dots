@@ -59,3 +59,7 @@ require("lazy").setup({
     },
   },
 })
+
+vim.cmd([[highlight Normal guibg=NONE ctermbg=NONE]])
+vim.cmd([[highlight NonText guibg=NONE ctermbg=NONE]])
+vim.cmd([[highlight EndOfBuffer guibg=NONE ctermbg=NONE]])
