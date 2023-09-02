@@ -1,5 +1,5 @@
 return {
-  { "tomasr/molokai" },
+  { "Gabirel/molokai" },
 
   -- Configure LazyVim to load gruvbox
   {
