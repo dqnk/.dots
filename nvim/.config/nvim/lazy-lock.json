@@ -63,6 +63,7 @@
   "venv-selector.nvim": { "branch": "main", "commit": "037b9af70942991b87eb54a80c989e26187e9f47" },
   "vim-fugitive": { "branch": "master", "commit": "572c8510123cbde02e8a1dafcd376c98e1e13f43" },
   "vim-illuminate": { "branch": "master", "commit": "76f28e858f1caae87bfa45fb4fd09e4b053fc45b" },
+  "vim-monokai": { "branch": "master", "commit": "6fb52e32863646e38cdebce57ae0d1688f334a79" },
   "vim-startuptime": { "branch": "master", "commit": "454b3de856b7bd298700de33d79774ca9b9e3875" },
   "vimtex": { "branch": "master", "commit": "ad17583ce399b6830b4c2888ef2a12d52c5eb607" },
   "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }
