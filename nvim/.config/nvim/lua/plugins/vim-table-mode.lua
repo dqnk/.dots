@@ -3,6 +3,6 @@ return {
   {
     "dhruvasagar/vim-table-mode",
     --enable this filetype in future if there are errors
-    --ft = "norg",
+    ft = { "norg", "md" },
   },
 }

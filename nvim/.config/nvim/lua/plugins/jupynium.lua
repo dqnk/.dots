@@ -1,6 +1,7 @@
 return {
   {
     "kiyoon/jupynium.nvim",
+    enabled = false,
     build = "pip3 install --user .",
     -- build = "conda run --no-capture-output -n jupynium pip install .",
     -- enabled = vim.fn.isdirectory(vim.fn.expand "~/miniconda3/envs/jupynium"),
@@ -127,5 +128,6 @@ return {
   },
   {
     "stevearc/dressing.nvim",
+    enabled = false,
   },
 }
