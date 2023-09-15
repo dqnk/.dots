@@ -117,6 +117,7 @@ bindsym $mod+c exec gnome-calculator
 bindsym $mod+f exec nautilus
 # this requires slurp and grim to be installed
 bindsym $mod+Shift+s exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
+bindsym Shift+Control+s exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 
 # Kill focused window
 bindsym $mod+Shift+c kill
