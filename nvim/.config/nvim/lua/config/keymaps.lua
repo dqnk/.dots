@@ -27,3 +27,6 @@ map("n", "<localleader>7", "<cmd>BufferLineGoToBuffer 7<cr>", { desc = "7th Tab"
 map("n", "<localleader>8", "<cmd>BufferLineGoToBuffer 8<cr>", { desc = "8th Tab" })
 map("n", "<localleader>9", "<cmd>BufferLineGoToBuffer 9<cr>", { desc = "9th Tab" })
 map("n", "<localleader>0", "<cmd>BufferLineGoToBuffer 0<cr>", { desc = "10th Tab" })
+
+-- map("n", "<C-d>", "zz<C-d>", { noremap = true, silent = true })
+-- map("n", "<C-u>", "zz<C-u>", { noremap = true, silent = true })
