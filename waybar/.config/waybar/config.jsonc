@@ -13,7 +13,15 @@
     "custom/playerlabel"
   ],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "disk", "tray", "network", "pulseaudio"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "disk",
+    "tray",
+    "battery",
+    "network",
+    "pulseaudio"
+  ],
   // Modules configuration
   "clock": {
     "format": " {:%H:%M}",
