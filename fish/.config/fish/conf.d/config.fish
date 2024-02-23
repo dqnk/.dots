@@ -18,7 +18,7 @@ set VISUAL nvim
 set WLR_NO_HARDWARE_CURSORS 1
 set NODE_OPTIONS --max_old_space_size=8192
 set GTK_THEME Adwaita-dark
-export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+set SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 set -g theme_display_git_default_branch yes
 set -g theme_color_scheme nord
 
