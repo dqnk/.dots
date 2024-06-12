@@ -6,3 +6,4 @@ or set -gx OMF_PATH "$HOME/.local/share/omf"
 # Load Oh My Fish configuration.
 source $OMF_PATH/init.fish
 fzf_configure_bindings --directory=\cf --variable= --git_status= --history=
+set fzf_fd_opts --hidden --max-depth 5

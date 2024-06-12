@@ -200,16 +200,24 @@ bind = $mainMod, mouse_up, workspace, e-1
 bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
 
+<<<<<<< HEAD
+bindelnti= , xf86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindelnti= , xf86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindelnti= , xf86audiomute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindelnti= , XF86AudioPlay, exec, playerctl play-pause
 bind = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
 bind = , XF86MonBrightnessUp, exec, brightnessctl set +5%
 
+
+
 bind = , switch:off:Lid Switch,exec,hyprctl keyword monitor "eDP-1, 1920x1080@60, 0x0, 1"
 bind = , switch:on:Lid Switch,exec,hyprctl keyword monitor "eDP-1, disable"
-
+=======
 bindelti= , xf86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindelti= , xf86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindelti= , xf86audiomute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindelti= , XF86AudioPlay, exec, playerctl play-pause
+>>>>>>> 49b0f2e (nvim stuff)
 
 exec-once = waybar
 exec-once = hyprpaper
