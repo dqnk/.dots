@@ -22,4 +22,6 @@ set SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 set -g theme_display_git_default_branch yes
 set -g theme_color_scheme nord
 
-thefuck --alias | source
+#thefuck --alias | source
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+set -gx PATH $HOME/.cabal/bin $PATH /home/dqnk/.ghcup/bin # ghcup-env

@@ -5,6 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+--vim.highlight.priorities.semantic_tokens = 90 -- Or any number lower than 100, treesitter's priority level
 
 require("lazy").setup({
   spec = {
@@ -21,6 +22,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.java" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.go" },
+    { import = "lazyvim.plugins.extras.lang.haskell" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.lang.ruby" },
@@ -66,6 +68,9 @@ require("lazy").setup({
 
 vim.cmd([[highlight Normal guibg=NONE ctermbg=NONE]])
 vim.cmd([[highlight NonText guibg=NONE ctermbg=NONE]])
+vim.g.neovide_transparency = 0
+vim.g.transparency = 0.88
+vim.g.neovide_background_color = ("#0f1117" .. string.format("%x", math.floor(((255 * vim.g.transparency) or 0.8))))
 --vim.cmd([[highlight EndOfBuffer guibg=NONE ctermbg=NONE]])
 
 require("notify").setup({
