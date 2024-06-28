@@ -1,0 +1,31 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	name = dqnk
+	email = 64268180+dqnk@users.noreply.github.com
+	signingkey = /home/dqnk/.ssh/id_rsa.pub
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[merge]
+	tool = nvimdiff
+[core]
+	editor = nvim
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[alias]
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$\\`echo $VAR\\`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
