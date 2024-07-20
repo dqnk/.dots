@@ -14,7 +14,7 @@ return {
         desc = "ChatGPT edit with instructions",
       },
     },
-    config = {
+    opts = {
       api_key_cmd = "gpg --decrypt " .. os.getenv("HOME") .. "/.openai-secret.txt.gpg",
       chat = {
         keymaps = { new_session = "<C-a>" },
