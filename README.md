@@ -92,6 +92,7 @@ kitty
 kitty-shell-integration
 kitty-terminfo
 less
+lolcat
 luarocks
 mplayer
 mpv
