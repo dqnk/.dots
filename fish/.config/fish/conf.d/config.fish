@@ -25,3 +25,15 @@ set -g theme_color_scheme nord
 #thefuck --alias | source
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.cabal/bin $PATH /home/dqnk/.ghcup/bin # ghcup-env
+
+
+function pomodoro
+    echo $argv[1] | lolcat
+    timer "$argv[2]"m
+    notify-send --app-name=WORK --icon= --wait --urgency=critical "$argv[1] session done
+take a break"
+end
+
+alias po="pomodoro"
+alias wo="pomodoro work 25"
+alias br="pomodoro break 5"
