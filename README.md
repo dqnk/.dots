@@ -32,6 +32,7 @@ docker
 docker-compose
 docker-machine
 dpkg
+dunst
 efivar
 egl-wayland
 eglexternalplatform
@@ -158,6 +159,12 @@ wofi
 xorg-xwayland
 yarn
 zsh
+```
+
+Install these from the AUR:
+
+```
+timer-bin
 ```
 
 - Use shell `fish`
