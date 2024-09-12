@@ -21,6 +21,8 @@ set GTK_THEME Adwaita-dark
 set SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 set -g theme_display_git_default_branch yes
 set -g theme_color_scheme nord
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
 
 #thefuck --alias | source
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
