@@ -10,6 +10,7 @@ fish_vi_key_bindings
 fish_add_path /opt/cuda/bin
 fish_add_path ~/.local/bin/
 fish_add_path ~/.cargo/bin/
+fish_add_path ~/.local/share/gem/ruby/3.2.0/bin/
 
 set QT_QPA_PLATFORMTHEME qt5ct
 set EDITOR nvim
