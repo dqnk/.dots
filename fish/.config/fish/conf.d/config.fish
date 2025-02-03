@@ -7,6 +7,10 @@ alias yay='paru'
 alias dub="docker compose up --build"
 fish_vi_key_bindings
 
+set -x GEM_HOME (gem env user_gemhome)
+set -x PATH $PATH $GEM_HOME/bin
+set -x PATH $HOME/.opam/default/bin $PATH
+
 fish_add_path /opt/cuda/bin
 fish_add_path ~/.local/bin/
 fish_add_path ~/.cargo/bin/
