@@ -1,6 +1,7 @@
 return {
   {
     "dqnk/ChatGPT.nvim",
+    enabled = false,
 
     keys = {
 
