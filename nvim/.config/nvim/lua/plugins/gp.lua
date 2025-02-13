@@ -57,6 +57,14 @@ return {
       },
       agents = {
         {
+          name = "ChatGPT4o",
+          disable = true,
+        },
+        {
+          name = "ChatGPT4o-mini",
+          disable = true,
+        },
+        {
           provider = "openai",
           name = "GPT4o",
           -- string with model name or table with model name and parameters
@@ -65,6 +73,14 @@ return {
           model = { model = "gpt-4o", temperature = 1.1, top_p = 1, max_tokens = 1000 },
           -- system prompt (use this to specify the persona/role of the AI)
           system_prompt = "Act as a coding assistant, also answer non-coding questions. I'm an advanced software engineer, adjust responses accordingly. Keep a running context of the codebase, libraries, etc. - Be concise, skip explanations unless asked. - Use code blocks for answers that include code. - Ask specific questions if additional information is needed. - If only code is provided, respond with `Code ingested: <filename/path>, <language>.` and assume follow-up questions relate to that code. If ready, respond with `READY`. ",
+        },
+        {
+          name = "ChatClaude-3-Haiku",
+          disable = true,
+        },
+        {
+          name = "ChatClaude-3-5-Sonnet",
+          disable = true,
         },
         {
           provider = "anthropic",
