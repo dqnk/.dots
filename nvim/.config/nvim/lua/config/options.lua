@@ -3,4 +3,3 @@
 -- Add any additional options here
 
 vim.g.maplocalleader = "-"
-vim.g.lazyvim_picker = "telescope"
