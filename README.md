@@ -169,11 +169,23 @@ timer-bin
 ```
 
 - Use shell `fish`
-- Rank mirrors with
+
+- Get available mirrors with:
 
 ```
-# reflector --country country1,country2 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist2
-# doas rankmirrors -n 16 /etc/pacman.d/mirrorlist2 > mirrorlist
+doas reflector --country country1,country2 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist2
+```
+
+- Rank mirrors with:
+
+```
+doas rankmirrors -n 16 /etc/pacman.d/mirrorlist2 > mirrorlist
+```
+
+- Link Docker folder to home partition:
+
+```
+doas ln -s ~/.docker/docker/ /var/lib/
 ```
 
 In web browser set `layout.css.devPixelsPerPx` to 2 or 3 to increase browser scale accross all components.
