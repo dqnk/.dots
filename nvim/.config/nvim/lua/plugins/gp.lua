@@ -1,13 +1,15 @@
 return {
   {
     "dqnk/gp.nvim",
+    -- replaced by frankroeder/parrot.nvim
+    enabled = false,
 
     keys = {
 
       { "<leader>as", "<cmd>GpChatToggle vsplit<cr>", mode = { "n", "v" }, desc = "Toggle LLM chat" },
       { "<leader>an", "<cmd>GpChatNew vsplit<cr>", mode = { "n", "v" }, desc = "New LLM chat" },
       { "<leader>ac", "<cmd>GpNextAgent<cr>", mode = { "n", "v" }, desc = "Cycle LLM" },
-      { "<leader>ad", "<cmd>GpChatDelete<cr>", mode = { "n", "v" }, desc = "Cycle LLM" },
+      { "<leader>ad", "<cmd>GpChatDelete<cr>", mode = { "n", "v" }, desc = "Delete LLM chat" },
       { "<C-x>", "<cmd>GpStop<cr>", mode = { "n", "v" }, desc = "Stop" },
     },
 
