@@ -160,6 +160,13 @@ wofi
 xorg-xwayland
 yarn
 zsh
+7zip
+fd
+ripgrep
+poppler
+zoxide
+imagemagick
+chafa
 ```
 
 Install these from the AUR:
