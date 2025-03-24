@@ -12,7 +12,7 @@ return {
       { "<leader>am", "<cmd>PrtModel<cr>", mode = { "n", "v" }, desc = "Select LLM" },
       { "<leader>af", "<cmd>PrtChatFinder<cr>", mode = { "n", "v" }, desc = "Find LLM chat" },
       { "<leader>ad", "<cmd>PrtChatDelete<cr>", mode = { "n", "v" }, desc = "Delete LLM chat" },
-      { "<C-x>", "<cmd>GpStop<cr>", mode = { "n", "v" }, desc = "Stop" },
+      { "<C-x>", "<cmd>PrtStop<cr>", mode = { "n", "v" }, desc = "Stop" },
     },
 
     config = {
@@ -64,7 +64,9 @@ return {
       },
       system_prompt = {
         chat = "Act as a coding assistant, also answer non-coding questions. I'm an advanced software engineer, adjust responses accordingly. Keep a running context of the codebase, libraries, etc. - Be concise, skip explanations unless asked. - Use code blocks for answers that include code. - Ask specific questions if additional information is needed. - If only code is provided, respond with `Code ingested: <filename/path>, <language>.` and assume follow-up questions relate to that code. If ready, respond with `READY`. ",
+        command = "",
       },
+
       -- Parrot doesn't use agents
       --agents = {
       --  {
