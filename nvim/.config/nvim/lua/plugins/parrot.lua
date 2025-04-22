@@ -34,6 +34,9 @@ return {
           api_key = { "gpg", "--decrypt", os.getenv("HOME") .. "/.anthropic-secret.txt.gpg", "2> /dev/null" },
           models = { "claude-3-5-sonnet-20241022" },
         },
+        gemini = {
+          api_key = { "gpg", "--decrypt", os.getenv("HOME") .. "/.google-gemini-secret.txt.gpg", "2> /dev/null" },
+        },
 
         -- github = {
         --   disable = true,
