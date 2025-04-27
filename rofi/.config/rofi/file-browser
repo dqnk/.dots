@@ -1,7 +1,0 @@
-icon-theme "Numix-Circle"
-cmd        "exo-open"
-oc-cmd     "evince;icon:evince"
-oc-cmd     "gimp;icon:gimp"
-depth      7
-
-open-parent-as-self

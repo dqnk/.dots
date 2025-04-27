@@ -110,7 +110,7 @@ qt5ct
 qt6ct
 reflector
 rlwrap
-rofi
+rofi-wayland
 rsync
 rubygems
 rust
@@ -156,7 +156,6 @@ webkitgtk-6.0
 wl-clipboard
 wlroots
 wlroots0.17
-wofi
 xorg-xwayland
 yarn
 zsh
