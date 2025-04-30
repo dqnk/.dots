@@ -43,6 +43,7 @@ mainbox {
     padding:                     0em;
     orientation:                 vertical;
     children:                    [ "inputbar" , "dummybox" ];
+    padding:                     1em;
     background-color:            transparent;
 }
 
@@ -50,7 +51,7 @@ dummybox {
     padding:                     0.5em;
     spacing:                     0em;
     orientation:                 horizontal;
-    children:                    [ /*"mode-switcher",*/ "listbox" ];
+    children:                    [ "mode-switcher", "listbox" ];
     background-color:            transparent;
     background-image:            transparent;
 }
@@ -67,7 +68,6 @@ entry {
     enabled:                     true;
     background-color:            @main-bg;
     text-color:                  @main-fg;
-    padding:                     1em;
 }
 
 
@@ -108,7 +108,7 @@ mode-switcher {
     orientation:                 vertical;
     width:                       6.8em;
     enabled:                     true;
-    padding:                     3.2em 1em 3.2em 1em;
+    padding:                     2.2em 1em 2.2em 1em;
     spacing:                     1em;
     background-color:            transparent;
 }
