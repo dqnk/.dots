@@ -28,16 +28,112 @@ return {
           endpoint = "https://api.openai.com/v1/chat/completions",
           model_endpoint = "https://api.openai.com/v1/models",
           api_key = { "gpg", "--decrypt", os.getenv("HOME") .. "/.openai-secret.txt.gpg", "2> /dev/null" },
-          models = { "o3-mini", "gpt-4o" },
+          models = { "o4-mini", "gpt-4o", "o3-mini" },
         },
 
         anthropic = {
-          -- endpoint = "https://api.anthropic.com/v1/messages",
+          name = "anthropic",
+          endpoint = "https://api.anthropic.com/v1/messages",
+          model_endpoint = "https://api.anthropic.com/v1/models",
+          params = {
+            chat = { max_tokens = 2048 },
+            command = { max_tokens = 2048 },
+          },
           api_key = { "gpg", "--decrypt", os.getenv("HOME") .. "/.anthropic-secret.txt.gpg", "2> /dev/null" },
-          models = { "claude-3-5-sonnet-20241022" },
+          headers = function(self)
+            return {
+              ["Content-Type"] = "application/json",
+              ["x-api-key"] = self.api_key,
+              ["anthropic-version"] = "2023-06-01",
+            }
+          end,
+          models = {
+            "claude-sonnet-4-20250514",
+            "claude-3-7-sonnet-20250219",
+            "claude-3-5-sonnet-20241022",
+          },
+          preprocess_payload = function(payload)
+            for _, message in ipairs(payload.messages) do
+              message.content = message.content:gsub("^%s*(.-)%s*$", "%1")
+            end
+            if payload.messages[1] and payload.messages[1].role == "system" then
+              -- remove the first message that serves as the system prompt as anthropic
+              -- expects the system prompt to be part of the API call body and not the messages
+              payload.system = payload.messages[1].content
+              table.remove(payload.messages, 1)
+            end
+            return payload
+          end,
         },
         gemini = {
+          name = "gemini",
+          endpoint = function(self)
+            return "https://generativelanguage.googleapis.com/v1beta/models/"
+              .. self._model
+              .. ":streamGenerateContent?alt=sse"
+          end,
+          model_endpoint = function(self)
+            return { "https://generativelanguage.googleapis.com/v1beta/models?key=" .. self.api_key }
+          end,
           api_key = { "gpg", "--decrypt", os.getenv("HOME") .. "/.google-gemini-secret.txt.gpg", "2> /dev/null" },
+          params = {
+            chat = { temperature = 1.1, topP = 1, topK = 10, maxOutputTokens = 2048 },
+            command = { temperature = 0.8, topP = 1, topK = 10, maxOutputTokens = 2048 },
+          },
+          headers = function(self)
+            return {
+              ["Content-Type"] = "application/json",
+              ["x-goog-api-key"] = self.api_key,
+            }
+          end,
+          models = {
+            "gemini-2.5-flash-preview-05-20",
+            "gemini-2.5-pro-preview-05-06",
+          },
+          preprocess_payload = function(payload)
+            local contents = {}
+            local system_instruction = nil
+            for _, message in ipairs(payload.messages) do
+              if message.role == "system" then
+                system_instruction = { parts = { { text = message.content } } }
+              else
+                local role = message.role == "assistant" and "model" or "user"
+                table.insert(
+                  contents,
+                  { role = role, parts = { { text = message.content:gsub("^%s*(.-)%s*$", "%1") } } }
+                )
+              end
+            end
+            local gemini_payload = {
+              contents = contents,
+              generationConfig = {
+                temperature = payload.temperature,
+                topP = payload.topP or payload.top_p,
+                maxOutputTokens = payload.max_tokens or payload.maxOutputTokens,
+              },
+            }
+            if system_instruction then
+              gemini_payload.systemInstruction = system_instruction
+            end
+            return gemini_payload
+          end,
+          process_stdout = function(response)
+            if not response or response == "" then
+              return nil
+            end
+            local success, decoded = pcall(vim.json.decode, response)
+            if
+              success
+              and decoded.candidates
+              and decoded.candidates[1]
+              and decoded.candidates[1].content
+              and decoded.candidates[1].content.parts
+              and decoded.candidates[1].content.parts[1]
+            then
+              return decoded.candidates[1].content.parts[1].text
+            end
+            return nil
+          end,
         },
 
         -- github = {
