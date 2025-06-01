@@ -26,6 +26,7 @@ return {
         openai = {
           name = "openai",
           endpoint = "https://api.openai.com/v1/chat/completions",
+          model_endpoint = "https://api.openai.com/v1/models",
           api_key = { "gpg", "--decrypt", os.getenv("HOME") .. "/.openai-secret.txt.gpg", "2> /dev/null" },
           models = { "o4-mini", "gpt-4o", "o3-mini" },
         },
