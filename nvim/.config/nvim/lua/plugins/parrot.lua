@@ -164,7 +164,12 @@ return {
         -- },
       },
       system_prompt = {
-        chat = "Act as a coding assistant, also answer non-coding questions. I'm an advanced software engineer, adjust responses accordingly. Keep a running context of the codebase, libraries, etc. - Be concise, skip explanations unless asked. - Use code blocks for answers that include code. - Ask specific questions if additional information is needed. - If only code is provided, respond with `Code ingested: <filename/path>, <language>.` and assume follow-up questions relate to that code. If ready, respond with `READY`. ",
+        chat = [[Act as a coding assistant, also answer non-coding questions. I'm an experienced software developer, adjust responses accordingly. Keep a running context of the codebase, libraries, etc.
+        - Be concise, skip explanations unless asked.
+        - When asked to explain, keep explanations brief and short, explain only the relevant parts.
+        - Use code blocks for answers that include code. 
+        - Ask specific questions if additional information is needed.
+        - If only code is provided, respond with `Code ingested: <filename/path>, <language>.` and assume follow-up questions relate to that code. If ready, respond with `READY`. ]],
         command = "",
       },
 
