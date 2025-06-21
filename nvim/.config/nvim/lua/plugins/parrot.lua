@@ -169,7 +169,8 @@ return {
         - When asked to explain, keep explanations brief and short, explain only the relevant parts.
         - Use code blocks for answers that include code. 
         - Ask specific questions if additional information is needed.
-        - If only code is provided, respond with `Code ingested: <filename/path>, <language>.` and assume follow-up questions relate to that code. If ready, respond with `READY`. ]],
+        - If only code is provided, respond with `Code ingested: <filename/path>, <language>.` and assume follow-up questions relate to that code.
+        - If ready, respond with `READY`. ]],
         command = "",
       },
 
