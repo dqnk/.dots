@@ -78,8 +78,10 @@ gtk3
 gtk4
 hdparm
 hyprcursor
+hypridle
 hyprland
 hyprlang
+hyprlock
 hyprpaper
 hyprutils
 i3-wm
