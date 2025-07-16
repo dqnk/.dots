@@ -12,7 +12,7 @@ return {
       { "<leader>am", "<cmd>PrtModel<cr>", mode = { "n", "v" }, desc = "Select LLM" },
       { "<leader>af", "<cmd>PrtChatFinder<cr>", mode = { "n", "v" }, desc = "Find LLM chat" },
       { "<leader>ad", "<cmd>PrtChatDelete<cr>", mode = { "n", "v" }, desc = "Delete LLM chat" },
-      { "<C-x>", "<cmd>PrtStop<cr>", mode = { "n", "v" }, desc = "Stop" },
+      { "<C-x>", "<cmd>PrtChatStop<cr>", mode = { "n", "v" }, desc = "Stop" },
     },
 
     config = {
