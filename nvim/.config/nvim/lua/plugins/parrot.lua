@@ -31,6 +31,14 @@ return {
           models = { "o4-mini", "gpt-4o", "o3-mini" },
         },
 
+        openrouter = {
+          name = "openrouter",
+          endpoint = "https://openrouter.ai/api/v1/chat/completions",
+          model_endpoint = "https://openrouter.ai/api/v1/models",
+          api_key = { "gpg", "--decrypt", os.getenv("HOME") .. "/.openrouter-secret.txt.gpg", "2> /dev/null" },
+          models = { "openai/o4-mini", "openai/gpt-4o", "openai/o3-mini" },
+        },
+
         anthropic = {
           name = "anthropic",
           endpoint = "https://api.anthropic.com/v1/messages",
