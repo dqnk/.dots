@@ -20,7 +20,8 @@
     "tray",
     "battery",
     "network",
-    "pulseaudio"
+    "idle_inhibitor",
+    "pulseaudio",
   ],
   // Modules configuration
   "clock": {
@@ -134,10 +135,18 @@
   },
 
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟 {volume}%",
+    "format": " {icon} {volume}%",
+    "format-muted": " 󰝟 {volume}%",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"],
+    },
+  },
+
+  "idle_inhibitor": {
+    "format": " {icon} ",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
     },
   },
 
