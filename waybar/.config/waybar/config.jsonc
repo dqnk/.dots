@@ -13,7 +13,15 @@
     "custom/playerlabel",
   ],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "disk", "tray", "network", "pulseaudio"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "disk",
+    "tray",
+    "network",
+    "idle_inhibitor",
+    "pulseaudio",
+  ],
   // Modules configuration
   "clock": {
     "format": " {:%H:%M}",
@@ -126,10 +134,18 @@
   },
 
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟 {volume}%",
+    "format": " {icon} {volume}%",
+    "format-muted": " 󰝟 {volume}%",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"],
+    },
+  },
+
+  "idle_inhibitor": {
+    "format": " {icon} ",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
     },
   },
 
