@@ -1,4 +1,6 @@
 package config
+package https://github.com/edc/bass
+package https://github.com/JGAntunes/fish-gvm
 package https://github.com/PatrickF1/fzf.fish
 package spark
 theme bobthefish
