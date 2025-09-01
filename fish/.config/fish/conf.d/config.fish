@@ -16,6 +16,8 @@ fish_add_path ~/.local/bin/
 fish_add_path ~/.cargo/bin/
 fish_add_path ~/.local/share/gem/ruby/*/bin/
 
+set -x CC gcc-14
+set -x CXX g++-14
 set QT_QPA_PLATFORMTHEME qt5ct
 set EDITOR nvim
 set VISUAL nvim
