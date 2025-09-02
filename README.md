@@ -194,6 +194,7 @@ doas rankmirrors -n 16 /etc/pacman.d/mirrorlist2 > mirrorlist
 
 ```
 doas ln -s ~/.docker/docker/ /var/lib/
+doas ln -s ~/.docker/containerd/ /var/lib/
 ```
 
 In web browser set `layout.css.devPixelsPerPx` to 2 or 3 to increase browser scale accross all components.
