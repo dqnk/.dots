@@ -1,33 +1,35 @@
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
 [user]
-	name = dqnk
-	email = 64268180+dqnk@users.noreply.github.com
-	signingkey = /home/dqnk/.ssh/id_ed25519.pub
+  name = dqnk
+  email = 64268180+dqnk@users.noreply.github.com
+  signingkey = /home/dqnk/.ssh/id_ed25519.pub
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [merge]
-	tool = nvimdiff
+  tool = nvimdiff
 [core]
-	editor = nvim
+  editor = nvim
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
 [alias]
-	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$\\`echo $VAR\\`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
+  change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$\\`echo $VAR\\`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
 [credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
+  helper = /usr/lib/git-core/git-credential-libsecret
 [gpg]
-	format = ssh
+  format = ssh
 [commit]
-	gpgsign = true
+  gpgsign = true
 [rerere]
-	enabled = true
+  enabled = true
+[includeIf "gitdir:**/abel/**"]
+  path = ~/.gitconfig-a
