@@ -59,8 +59,8 @@ return {
     end
     -- custom TS debug fix
     for i, _ in ipairs(dap.configurations.typescript) do
-      dap.configurations.typescript[i]["sourceMaps"] = true
-      dap.configurations.typescript[i]["resolveSourceMapLocations"] = { "${workspaceFolder}/buid/**/*.js" }
+      -- dap.configurations.typescript[i]["sourceMaps"] = true
+      -- dap.configurations.typescript[i]["resolveSourceMapLocations"] = { "${workspaceFolder}/buid/**/*.js" }
       dap.configurations.typescript[i]["skipFiles"] = { "<node_internals>/**", "node_modules/**" }
       dap.configurations.typescript[i]["runtimeExecutable"] = "ts-node"
     end
