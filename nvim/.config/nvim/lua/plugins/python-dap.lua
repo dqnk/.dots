@@ -1,6 +1,7 @@
 return {
   "mfussenegger/nvim-dap",
   optional = true,
+  -- disconnect, useful specifically for python debugpy
   dependencies = {
     "mfussenegger/nvim-dap-python",
     -- stylua: ignore
