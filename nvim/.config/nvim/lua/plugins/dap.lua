@@ -10,5 +10,14 @@ return {
       end,
       desc = "Disconnect",
     },
+    {
+      "<leader>dt",
+      function()
+        if vim.fn.confirm("Terminate debug session?", "&Yes\n&No", 1) == 1 then
+          require("dap").terminate()
+        end
+      end,
+      desc = "Terminate",
+    },
   },
 }
