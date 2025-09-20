@@ -1,26 +1,19 @@
 return {
-  {
-    "nvim-orgmode/orgmode",
-    ft = { "org" },
-    config = function()
-      require("orgmode").setup({})
-      require("orgmode").setup_ts_grammar()
+  "nvim-orgmode/orgmode",
+  event = "VeryLazy",
+  ft = { "org" },
+  config = function()
+    -- Setup orgmode
+    require("orgmode").setup({
+      -- org_agenda_files = '~/orgfiles/**/*',
+      -- org_default_notes_file = '~/orgfiles/refile.org',
+    })
 
-      -- Treesitter configuration
-      require({
-        "nvim-treesitter/nvim-treesitter",
-        -- If TS highlights are not enabled at all, or disabled via `disable` prop,
-        -- highlighting will fallback to default Vim syntax highlighting
-        opts = {
-          highlight = {
-            enable = true,
-            -- Required for spellcheck, some LaTex highlights and
-            -- code block highlights that do not have ts grammar
-            additional_vim_regex_highlighting = { "org" },
-          },
-          ensure_installed = { "org" }, -- Or run :TSUpdate org
-        },
-      })
-    end,
-  },
+    -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
+    -- add ~org~ to ignore_install
+    -- require("nvim-treesitter.configs").setup({
+    --   ensure_installed = "all",
+    --   ignore_install = { "org" },
+    -- })
+  end,
 }

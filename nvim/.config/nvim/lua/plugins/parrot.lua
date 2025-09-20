@@ -15,7 +15,7 @@ return {
       { "<C-x>", "<cmd>PrtChatStop<cr>", mode = { "n", "v" }, desc = "Stop" },
     },
 
-    config = {
+    opts = {
       chat_shortcut_respond = { modes = { "n" }, shortcut = "<Enter>" },
       -- For customization, refer to Install > Configuration in the Documentation/Readme
       providers = {
