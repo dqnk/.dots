@@ -1,0 +1,18 @@
+[General]
+TerminalApplication=kitty
+TerminalService=kitty.desktop
+UseSystemBell=true
+XftAntialias=true
+XftHintStyle=hintfull
+XftSubPixel=rgb
+font=Fira Code Nerd Font Mono,10,-1,5,50,0,0,0,0,0
+menuFont=Fira Code Nerd Font Mono,10,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=Fira Code Nerd Font Mono,8,-1,5,50,0,0,0,0,0
+toolBarFont=Fira Code Nerd Font Mono,10,-1,5,50,0,0,0,0,0
+
+[Icons]
+Theme=Papirus-Dark
+
+[KDE]
+widgetStyle=qt6ct-style
