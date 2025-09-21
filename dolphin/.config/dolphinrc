@@ -1,6 +1,9 @@
 [CompactMode]
 PreviewSize=80
 
+[DetailsMode]
+PreviewSize=80
+
 [General]
 Version=202
 ViewPropsTimestamp=2021,10,2,19,7,38.729
