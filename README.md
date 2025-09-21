@@ -5,6 +5,7 @@ alacritty
 amd-ucode
 archlinux-appstream-data
 archlinux-keyring
+archlinux-xdg-menu
 audacity
 baobab
 base
