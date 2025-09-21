@@ -31,6 +31,7 @@ dmenu
 docker
 docker-compose
 docker-machine
+dolphin
 dpkg
 dunst
 efivar
@@ -93,6 +94,9 @@ keyutils
 kitty
 kitty-shell-integration
 kitty-terminfo
+kservice5
+kvantum
+kvantum-qt5
 less
 lolcat
 luarocks
@@ -109,7 +113,6 @@ polybar
 python
 qbittorrent
 qt5ct
-qt6ct
 reflector
 rlwrap
 rofi-wayland
@@ -174,6 +177,7 @@ Install these from the AUR:
 
 ```
 timer-bin
+qt6ct-kde
 ```
 
 - Use shell `fish`
@@ -198,3 +202,11 @@ doas ln -s ~/.docker/containerd/ /var/lib/
 ```
 
 In web browser set `layout.css.devPixelsPerPx` to 2 or 3 to increase browser scale accross all components.
+
+- Install color scheme [Fluent](https://github.com/vinceliuice/Fluent-kde.git), using
+
+```
+./install.sh --color dark --round
+```
+
+and set it in `kvantumma nager`.
