@@ -109,6 +109,7 @@ npm
 opendoas
 pacman-contrib
 pacman-mirrorlist
+papirus-icon-theme
 polybar
 python
 qbittorrent
