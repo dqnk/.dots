@@ -204,10 +204,10 @@ doas ln -s ~/.docker/containerd/ /var/lib/
 
 In web browser set `layout.css.devPixelsPerPx` to 2 or 3 to increase browser scale accross all components.
 
-- Install color scheme [Fluent](https://github.com/vinceliuice/Fluent-kde.git), using
+- KDE theme is included in [Kvantum](./Kvantum/). It can be installed from e. g. [Fluent](https://github.com/vinceliuice/Fluent-kde.git), using
 
 ```
 ./install.sh --color dark --round
 ```
 
-and set it in `kvantumma nager`.
+and set in `kvantumma nager`.
