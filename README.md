@@ -67,7 +67,26 @@ git-lfs
 gitg
 github-cli
 glibc
-gnome
+gnome-app-list
+gnome-autoar
+gnome-bluetooth
+gnome-bluetooth-3.0
+gnome-boxes
+gnome-common
+gnome-desktop
+gnome-desktop-4
+gnome-desktop-common
+gnome-epub-thumbnailer
+gnome-keybindings
+gnome-keyring
+gnome-mimeapps
+gnome-online-accounts
+gnome-photos
+gnome-screenshot
+gnome-terminal
+gnome-themes-extra
+gnome-tweaks
+gnome-video-effects
 gnupg
 gnutls
 go
@@ -103,6 +122,7 @@ lolcat
 luarocks
 mplayer
 mpv
+nautilus
 neofetch
 neovim
 nodejs
@@ -215,4 +235,12 @@ In web browser set `layout.css.devPixelsPerPx` to 2 or 3 to increase browser sca
 ./install.sh --color dark --round
 ```
 
-and set in `kvantumma nager`.
+and set in `kvantummanager`.
+
+For Dolphin might have to run
+
+```
+kbuildsycoca6 --noincremental
+```
+
+to remember programs for opening filetypes.
