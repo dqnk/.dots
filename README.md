@@ -244,3 +244,11 @@ kbuildsycoca6 --noincremental
 ```
 
 to remember programs for opening filetypes.
+If that does not work, might need to:
+
+```
+doas pacman -Sy archlinux-xdg-menu
+doas update-desktop-database
+cd /etc/xdg/menus
+doas mv arch-applications.menu applications.menu
+```
