@@ -162,6 +162,10 @@ webkitgtk-6.0
 wl-clipboard
 wlroots
 wlroots0.17
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-wlr
 xorg-xwayland
 yarn
 zsh
