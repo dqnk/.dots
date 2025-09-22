@@ -44,3 +44,5 @@ end
 alias po="pomodoro"
 alias wo="pomodoro work 25"
 alias br="pomodoro break 5"
+
+mise activate fish | source
