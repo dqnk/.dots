@@ -89,7 +89,6 @@ gnome-tweaks
 gnome-video-effects
 gnupg
 gnutls
-go
 gparted
 gpgme
 gpm
@@ -126,8 +125,6 @@ mpv
 nautilus
 neofetch
 neovim
-nodejs
-npm
 opendoas
 pacman-contrib
 pacman-mirrorlist
@@ -253,3 +250,5 @@ doas update-desktop-database
 cd /etc/xdg/menus
 doas mv arch-applications.menu applications.menu
 ```
+
+For Go and Node versions, use [mise](ht>tps://github.com/jdx/mise).
