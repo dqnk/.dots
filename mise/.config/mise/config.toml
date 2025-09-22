@@ -4,3 +4,4 @@ node = "24"
 
 [settings]
 go_set_gopath = true
+idiomatic_version_file_enable_tools = ["node"]
