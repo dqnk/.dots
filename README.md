@@ -120,6 +120,7 @@ kvantum-qt5
 less
 lolcat
 luarocks
+mise
 mplayer
 mpv
 nautilus
