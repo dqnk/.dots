@@ -1,5 +1,6 @@
 [tools]
 go = "1.22.8"
+node = "24"
 usage = "latest"
 
 [settings]
