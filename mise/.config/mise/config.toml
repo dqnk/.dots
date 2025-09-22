@@ -1,7 +1,6 @@
 [tools]
-go = "1.22.8"
+go = "1.25.1"
 node = "24"
-usage = "latest"
 
 [settings]
 go_set_gopath = true
