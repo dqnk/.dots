@@ -1,0 +1,6 @@
+[tools]
+go = "1.22.8"
+usage = "latest"
+
+[settings]
+go_set_gopath = true
