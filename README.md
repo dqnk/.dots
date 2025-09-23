@@ -129,6 +129,10 @@ opendoas
 pacman-contrib
 pacman-mirrorlist
 papirus-icon-theme
+pavucontrol
+pipewire
+pipewire-audio
+pipewire-pulse
 polybar
 python
 qbittorrent
@@ -178,6 +182,7 @@ wayland-utils
 webkit2gtk
 webkit2gtk-4.1
 webkitgtk-6.0
+wireplumber
 wl-clipboard
 wlroots
 wlroots0.17
@@ -252,3 +257,5 @@ doas mv arch-applications.menu applications.menu
 ```
 
 For Go and Node versions, use [mise](ht>tps://github.com/jdx/mise).
+
+For sound use `pipewire` and `pavucontrol`.
