@@ -20,7 +20,7 @@
     "tray",
     "network",
     "idle_inhibitor",
-    "pulseaudio",
+    "wireplumber",
   ],
   // Modules configuration
   "clock": {
@@ -133,9 +133,9 @@
     //	"on-scroll-down":,
   },
 
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": " 󰝟 {volume}%",
+  "wireplumber": {
+    "format": " {icon} {volume}% ",
+    "format-muted": " 󰝟 {volume}% ",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"],
     },
