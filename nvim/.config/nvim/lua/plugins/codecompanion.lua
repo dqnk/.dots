@@ -14,17 +14,36 @@ return {
     },
     strategies = {
       chat = {
-        adapter = "anthropic",
-        model = "claude-sonnet-4-20250514",
+        adapter = "openrouter",
+        model = "anthropic/claude-sonnet-4.5",
+        opts = {
+          system_prompt = [[Act as a coding assistant to an experienced software developer, also answer non-coding questions.
+        1. Keep a running context of the codebase, libraries, etc.
+        2. Be concise, skip explanations unless specifically asked about them.
+        3. When asked to explain, keep explanations brief and short, explain only the most relevant parts.
+        4. Use code blocks for answers that include code.
+        5. Ask specific questions if additional information is needed.
+        6. If only code is provided, respond with `Code ingested: <filename/path>, <language>.` and assume follow-up questions relate to that code.
+        7. If ready, respond with `READY`.
+        8. Do not return duplicate code. Instead use a line comment with '...existing code...' to indicate code that is already present in the file.
+        ]],
+        },
       },
     },
     -- example with anthropic, have enough spaces in the api_key command
     adapters = {
       http = {
-        anthropic = function()
-          return require("codecompanion.adapters").extend("anthropic", {
+        openrouter = function()
+          return require("codecompanion.adapters").extend("openai_compatible", {
             env = {
-              api_key = "cmd:gpg --decrypt " .. os.getenv("HOME") .. "/.anthropic-secret.txt.gpg 2> /dev/null",
+              api_key = "cmd:gpg --decrypt " .. os.getenv("HOME") .. "/.openrouter-secret.txt.gpg 2> /dev/null",
+              url = "https://openrouter.ai/api",
+              chat_url = "/v1/chat/completions",
+            },
+            schema = {
+              model = {
+                default = "anthropic/claude-sonnet-4.5",
+              },
             },
           })
         end,
