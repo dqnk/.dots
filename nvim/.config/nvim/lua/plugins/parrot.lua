@@ -1,7 +1,6 @@
 return {
   {
     "frankroeder/parrot.nvim",
-    tag = "v2.5.0",
 
     keys = {
 
