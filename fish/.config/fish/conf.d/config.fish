@@ -18,6 +18,8 @@ fish_add_path ~/.local/share/gem/ruby/*/bin/
 
 set -x CC gcc-14
 set -x CXX g++-14
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 set QT_QPA_PLATFORMTHEME qt5ct
 set EDITOR nvim
 set VISUAL nvim
@@ -46,3 +48,4 @@ alias wo="pomodoro work 25"
 alias br="pomodoro break 5"
 
 mise activate fish | source
+pyenv init - fish | source
