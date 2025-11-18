@@ -1,14 +1,17 @@
 return {
   "folke/sidekick.nvim",
-  opts = function()
-    -- Accept inline suggestions or next edits
-    LazyVim.cmp.actions.ai_nes = function()
-      local Nes = require("sidekick.nes")
-      if Nes.have() and (Nes.jump() or Nes.apply()) then
-        return true
-      end
-    end
-  end,
+  -- opts = function()
+  --   -- Accept inline suggestions or next edits
+  --   LazyVim.cmp.actions.ai_nes = function()
+  --     local Nes = require("sidekick.nes")
+  --     if Nes.have() and (Nes.jump() or Nes.apply()) then
+  --       return true
+  --     end
+  --   end
+  -- end,
+  opts = {
+    nes = { enabled = false },
+  },
   -- stylua: ignore
   keys = {
     -- nes is also useful in normal mode
@@ -16,7 +19,7 @@ return {
     { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
     {
       "<leader>aa",
-      function() require("sidekick.cli").toggle() end,
+      function() require("sidekick.cli").toggle({name="opencode", focus=true}) end,
       desc = "Sidekick Toggle CLI",
     },
     {
@@ -45,7 +48,7 @@ return {
     -- },
     {
       "<c-.>",
-      function() require("sidekick.cli").focus() end,
+      function() require("sidekick.cli").focus({name="opencode"}) end,
       mode = { "n", "x", "i", "t" },
       desc = "Sidekick Switch Focus",
     },
