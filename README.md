@@ -207,6 +207,7 @@ Install these from the AUR:
 ```
 timer-bin
 qt6ct-kde
+sunsetr-bin
 ```
 
 - Use shell `fish`
