@@ -100,8 +100,8 @@
   },
 
   "memory": {
-    "format": " {used}/{total} GiB",
-    "format-alt": " {}%",
+    "format": "󰍛 {used}/{total} GiB",
+    "format-alt": "󰍛 {}%",
     "interval": 1,
     "states": {
       "warning": 70,
