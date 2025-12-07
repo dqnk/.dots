@@ -223,6 +223,14 @@ window#waybar {
   font-weight: bold;
 }
 
+#memory.warning {
+  color: #fabd2d;
+}
+
+#memory.critical {
+  color: #f7768e;
+}
+
 #disk {
   /* background-color: #282828; */
   background: transparent;
