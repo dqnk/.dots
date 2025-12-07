@@ -117,7 +117,7 @@
   "disk": {
     "unit": "GiB",
     "format": " {percentage_used}%",
-    "format-alt": " {specific_free}/{specific_total} GiB",
+    "format-alt": " {specific_used:0.2f}/{specific_total:0.2f} GiB",
   },
 
   "network": {
