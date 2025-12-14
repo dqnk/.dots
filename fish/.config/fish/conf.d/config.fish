@@ -38,7 +38,7 @@ set -gx PATH $HOME/.cabal/bin $PATH /home/dqnk/.ghcup/bin # ghcup-env
 
 function pomodoro
     echo $argv[1] | lolcat
-    timer "$argv[2]"m
+    termdown "$argv[2]"m
     notify-send --app-name=WORK --icon= --wait --urgency=critical "$argv[1] session done
 take a break"
 end

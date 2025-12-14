@@ -153,6 +153,7 @@ swayidle
 swayimg
 swaylock
 swi-prolog
+termdown
 tmux
 tor
 torbrowser-launcher
@@ -205,7 +206,6 @@ chafa
 Install these from the AUR:
 
 ```
-timer-bin
 qt6ct-kde
 sunsetr-bin
 ```
