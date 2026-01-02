@@ -187,7 +187,11 @@ return {
         4. Use code blocks for answers that include code.
         5. Ask specific questions if additional information is needed.
         6. If only code is provided, respond with `Code ingested: <filename/path>, <language>.` and assume follow-up questions relate to that code.
-        7. If ready, respond with `READY`. ]],
+        8. Use Markdown for lists, tables, and styling.
+        9. Use ```code fences``` for all code blocks.
+        10. Format file names, paths, and function names with `inline code` backticks.
+        11. **For all mathematical expressions, you must use dollar-sign delimiters. Use $...$ for inline math and $$...$$ for block math. Do not use (...) or [...] delimiters.**
+        12. If ready, respond with `READY`. ]],
 
         command = "",
       },
