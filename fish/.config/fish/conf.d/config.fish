@@ -5,6 +5,7 @@ alias ls='ls --color=auto'
 alias v='nvim'
 alias yay='paru'
 alias dub="docker compose up --build"
+alias timer="termdown"
 fish_vi_key_bindings
 
 set -x GEM_HOME (gem env user_gemhome)
