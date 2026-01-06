@@ -4,38 +4,9 @@ SETUVAR --export GTK_THEME:Adwaita\x2ddark
 SETUVAR --export PYENV_ROOT:/home/dqnk/\x2epyenv
 SETUVAR --export SSH_AGENT_PID:2379
 SETUVAR --export SSH_AUTH_SOCK:/run/user/1000/gcr/ssh
-SETUVAR __fish_initialized:3800
+SETUVAR __fish_initialized:4300
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/nvm\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR chain_links:chain\x2elinks\x2eroot\x1echain\x2elinks\x2ejobs\x1echain\x2elinks\x2epwd\x1echain\x2elinks\x2evcs_branch\x1echain\x2elinks\x2evcs_dirty\x1echain\x2elinks\x2evcs_stashed
-SETUVAR fish_color_autosuggestion:BD93F9
-SETUVAR fish_color_cancel:\x2dr
-SETUVAR --export fish_color_command:F8F8F2
-SETUVAR fish_color_comment:6272A4
-SETUVAR fish_color_cwd:green
-SETUVAR fish_color_cwd_root:red
-SETUVAR fish_color_end:50FA7B
-SETUVAR fish_color_error:FFB86C
-SETUVAR fish_color_escape:00a6b2
-SETUVAR fish_color_history_current:\x2d\x2dbold
-SETUVAR fish_color_host:normal
-SETUVAR fish_color_host_remote:yellow
-SETUVAR fish_color_match:\x2d\x2dbackground\x3dbrblue
-SETUVAR fish_color_normal:normal
-SETUVAR fish_color_operator:00a6b2
-SETUVAR --export fish_color_param:FF79C6
-SETUVAR --export fish_color_quote:F1FA8C
-SETUVAR fish_color_redirection:8BE9FD
-SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
-SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
-SETUVAR fish_color_status:red
-SETUVAR fish_color_user:brgreen
-SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_key_bindings:fish_vi_key_bindings
-SETUVAR fish_pager_color_completion:normal
-SETUVAR fish_pager_color_description:B3A06D\x1eyellow
-SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
-SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths:/home/dqnk/\x2epyenv/bin\x1e/home/dqnk/\x2elocal/share/gem/ruby/3\x2e0\x2e0/bin\x1e/home/dqnk/\x2elocal/share/gem/ruby/3\x2e3\x2e0/bin\x1e/home/dqnk/\x2elocal/share/gem/ruby/3\x2e4\x2e0/bin\x1e/home/dqnk/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/dqnk/\x2ecargo/bin\x1e/home/dqnk/\x2elocal/bin\x1e/opt/cuda/bin
