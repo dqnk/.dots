@@ -39,6 +39,7 @@ return {
       "<leader>av",
       function() require("sidekick.cli").send({ msg = "{selection}" }) end,
       mode = { "x" },
+      desc = "Send Selection",
     },
     -- {
     --   "<leader>ap",
