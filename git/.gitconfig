@@ -33,3 +33,5 @@
   enabled = true
 [includeIf "gitdir:**/abel/**"]
   path = ~/.gitconfig-a
+[pull]
+	rebase = true
