@@ -48,5 +48,15 @@ alias po="pomodoro"
 alias wo="pomodoro work 25"
 alias br="pomodoro break 5"
 
+if command -q docker
+    function docker2
+        command docker $argv
+    end
+end
+
+function docker
+    podman $argv
+end
+
 mise activate fish | source
 pyenv init - fish | source
