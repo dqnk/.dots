@@ -22,7 +22,7 @@ set -x CXX g++-14
 set -Ux PYENV_ROOT $HOME/.pyenv
 set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 set QT_QPA_PLATFORMTHEME qt5ct
-set EDITOR nvim
+set -x EDITOR nvim
 set VISUAL nvim
 set WLR_NO_HARDWARE_CURSORS 1
 set NODE_OPTIONS --max_old_space_size=8192
