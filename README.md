@@ -54,8 +54,6 @@ fontconfig
 fzf
 gcc
 gcc-libs
-gcc13
-gcc13-libs
 gdb
 gdb-common
 gdbm
@@ -69,7 +67,6 @@ github-cli
 glibc
 gnome-app-list
 gnome-autoar
-gnome-bluetooth
 gnome-bluetooth-3.0
 gnome-boxes
 gnome-common
@@ -103,6 +100,7 @@ hyprland
 hyprlang
 hyprlock
 hyprpaper
+hyprsunset
 hyprutils
 i3-wm
 jdk-openjdk
@@ -123,7 +121,6 @@ mise
 mplayer
 mpv
 nautilus
-neofetch
 neovim
 opendoas
 pacman-contrib
@@ -185,7 +182,6 @@ webkit2gtk-4.1
 webkitgtk-6.0
 wireplumber
 wl-clipboard
-wlroots
 wlroots0.17
 xdg-desktop-portal
 xdg-desktop-portal-gtk
