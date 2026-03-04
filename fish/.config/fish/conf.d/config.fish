@@ -59,4 +59,4 @@ function docker
 end
 
 mise activate fish | source
-pyenv init - fish | source
+# pyenv init - fish | source
