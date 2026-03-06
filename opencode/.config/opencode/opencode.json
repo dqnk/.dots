@@ -17,5 +17,6 @@
         "/usr/sbin/chromium"
       ]
     }
-  }
+  },
+  "plugin": ["oh-my-opencode@latest"]
 }

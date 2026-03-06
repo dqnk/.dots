@@ -1,0 +1,61 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "moonshotai/kimi-k2.5"
+    },
+    "hephaestus": {
+      "model": "z-ai/glm-5"
+    },
+    "oracle": {
+      "model": "z-ai/glm-5"
+    },
+    "librarian": {
+      "model": "z-ai/glm-5"
+    },
+    "explore": {
+      "model": "z-ai/glm-5"
+    },
+    "multimodal-looker": {
+      "model": "z-ai/glm-4.6v"
+    },
+    "prometheus": {
+      "model": "moonshotai/kimi-k2.5"
+    },
+    "metis": {
+      "model": "moonshotai/kimi-k2.5"
+    },
+    "momus": {
+      "model": "z-ai/glm-5"
+    },
+    "atlas": {
+      "model": "moonshotai/kimi-k2.5"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "z-ai/glm-5"
+    },
+    "ultrabrain": {
+      "model": "moonshotai/kimi-k2.5"
+    },
+    "deep": {
+      "model": "z-ai/glm-5"
+    },
+    "artistry": {
+      "model": "z-ai/glm-5"
+    },
+    "quick": {
+      "model": "z-ai/glm-5"
+    },
+    "unspecified-low": {
+      "model": "z-ai/glm-5"
+    },
+    "unspecified-high": {
+      "model": "moonshotai/kimi-k2.5"
+    },
+    "writing": {
+      "model": "moonshotai/kimi-k2.5"
+    }
+  }
+}
