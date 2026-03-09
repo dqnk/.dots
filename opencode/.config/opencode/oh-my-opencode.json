@@ -2,60 +2,68 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "openrouter/moonshotai/kimi-k2.5"
-    },
-    "hephaestus": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/claude-opus-4.6",
+      "variant": "max"
     },
     "oracle": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/gpt-5.4",
+      "variant": "high"
     },
     "librarian": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/gemini-3-flash"
     },
     "explore": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/grok-code-fast-1"
     },
     "multimodal-looker": {
-      "model": "openrouter/z-ai/glm-4.6v"
+      "model": "github-copilot/gemini-3-flash"
     },
     "prometheus": {
-      "model": "openrouter/moonshotai/kimi-k2.5"
+      "model": "github-copilot/claude-opus-4.6",
+      "variant": "max"
     },
     "metis": {
-      "model": "openrouter/moonshotai/kimi-k2.5"
+      "model": "github-copilot/claude-opus-4.6",
+      "variant": "max"
     },
     "momus": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/gpt-5.4",
+      "variant": "medium"
     },
     "atlas": {
-      "model": "openrouter/moonshotai/kimi-k2.5"
+      "model": "github-copilot/claude-opus-4.6"
+    },
+    "hephaestus": {
+      "model": "github-copilot/gpt-5.4"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/gemini-3-pro",
+      "variant": "high"
     },
     "ultrabrain": {
-      "model": "openrouter/moonshotai/kimi-k2.5"
-    },
-    "deep": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/claude-opus-4.6",
+      "variant": "high"
     },
     "artistry": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/claude-opus-4.6",
+      "variant": "high"
     },
     "quick": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/claude-opus-4.6"
     },
     "unspecified-low": {
-      "model": "openrouter/z-ai/glm-5"
+      "model": "github-copilot/claude-opus-4.6"
     },
     "unspecified-high": {
-      "model": "openrouter/moonshotai/kimi-k2.5"
+      "model": "github-copilot/claude-opus-4.6"
     },
     "writing": {
-      "model": "openrouter/moonshotai/kimi-k2.5"
+      "model": "github-copilot/claude-opus-4.6"
+    },
+    "deep": {
+      "model": "github-copilot/gpt-5.4"
     }
   }
 }
