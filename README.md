@@ -256,3 +256,9 @@ doas mv arch-applications.menu applications.menu
 For Go and Node versions, use [mise](ht>tps://github.com/jdx/mise).
 
 For sound use `pipewire` and `pavucontrol`.
+
+For Downloads mount them as ramdisk by adding this to `/etc/fstab`:
+
+```
+tmpfs /home/<user>/Downloads    tmpfs  rw,noexec,nodev,nosuid,uid=<user>,gid=<user>,mode=1700,size=26G 0 0
+```
