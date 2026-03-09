@@ -8,20 +8,20 @@
     },
     "oracle": {
       "model": "github-copilot/gpt-5.4",
-      "fallback_models": "openrouter/z-ai/glm-5",
+      "fallback_models": "openrouter/google/gemini-3.1-pro-preview",
       "variant": "high"
     },
     "librarian": {
       "model": "github-copilot/gemini-3-flash-preview",
-      "fallback_models": "openrouter/z-ai/glm-5"
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
     },
     "explore": {
       "model": "github-copilot/grok-code-fast-1",
-      "fallback_models": "openrouter/z-ai/glm-5"
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
     },
     "multimodal-looker": {
       "model": "github-copilot/gemini-3-flash-preview",
-      "fallback_models": "openrouter/z-ai/glm-4.6v"
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
     },
     "prometheus": {
       "model": "github-copilot/claude-opus-4.6",
@@ -65,11 +65,11 @@
     },
     "quick": {
       "model": "github-copilot/claude-opus-4.6",
-      "fallback_models": "openrouter/z-ai/glm-5"
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
     },
     "unspecified-low": {
       "model": "github-copilot/claude-opus-4.6",
-      "fallback_models": "openrouter/z-ai/glm-5"
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
     },
     "unspecified-high": {
       "model": "github-copilot/claude-opus-4.6",
