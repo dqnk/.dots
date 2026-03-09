@@ -3,67 +3,85 @@
   "agents": {
     "sisyphus": {
       "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5",
       "variant": "max"
     },
     "oracle": {
       "model": "github-copilot/gpt-5.4",
+      "fallback_models": "openrouter/z-ai/glm-5",
       "variant": "high"
     },
     "librarian": {
-      "model": "github-copilot/gemini-3-flash"
+      "model": "github-copilot/gemini-3-flash-preview",
+      "fallback_models": "openrouter/z-ai/glm-5"
     },
     "explore": {
-      "model": "github-copilot/grok-code-fast-1"
+      "model": "github-copilot/grok-code-fast-1",
+      "fallback_models": "openrouter/z-ai/glm-5"
     },
     "multimodal-looker": {
-      "model": "github-copilot/gemini-3-flash"
+      "model": "github-copilot/gemini-3-flash-preview",
+      "fallback_models": "openrouter/z-ai/glm-4.6v"
     },
     "prometheus": {
       "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5",
       "variant": "max"
     },
     "metis": {
       "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5",
       "variant": "max"
     },
     "momus": {
       "model": "github-copilot/gpt-5.4",
+      "fallback_models": "openrouter/z-ai/glm-5",
       "variant": "medium"
     },
     "atlas": {
-      "model": "github-copilot/claude-opus-4.6"
+      "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
     },
     "hephaestus": {
-      "model": "github-copilot/gpt-5.4"
+      "model": "github-copilot/gpt-5.4",
+      "fallback_models": "openrouter/z-ai/glm-5"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "github-copilot/gemini-3-pro",
+      "model": "github-copilot/gemini-3.1-pro-preview",
+      "fallback_models": "openrouter/z-ai/glm-5",
       "variant": "high"
     },
     "ultrabrain": {
       "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5",
       "variant": "high"
     },
     "artistry": {
       "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/z-ai/glm-5",
       "variant": "high"
     },
     "quick": {
-      "model": "github-copilot/claude-opus-4.6"
+      "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/z-ai/glm-5"
     },
     "unspecified-low": {
-      "model": "github-copilot/claude-opus-4.6"
+      "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/z-ai/glm-5"
     },
     "unspecified-high": {
-      "model": "github-copilot/claude-opus-4.6"
+      "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
     },
     "writing": {
-      "model": "github-copilot/claude-opus-4.6"
+      "model": "github-copilot/claude-opus-4.6",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
     },
     "deep": {
-      "model": "github-copilot/gpt-5.4"
+      "model": "github-copilot/gpt-5.4",
+      "fallback_models": "openrouter/z-ai/glm-5"
     }
   }
 }
