@@ -11,6 +11,13 @@ return {
   -- end,
   opts = {
     nes = { enabled = false },
+    cli = {
+      win = {
+        keys = {
+          prompt = { "<c-r>", "prompt", mode = "t", desc = "insert prompt or context" },
+        },
+      },
+    },
   },
   -- stylua: ignore
   keys = {
