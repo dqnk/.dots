@@ -9,6 +9,10 @@
       "model": "anthropic/claude-opus-4-6",
       "variant": "high"
     },
+    "hephaestus": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "high"
+    },
     "librarian": {
       "model": "github-copilot/gemini-3-flash-preview",
       "fallback_models": "openrouter/moonshotai/kimi-k2.5"
