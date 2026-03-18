@@ -3,11 +3,11 @@
   "agents": {
     "sisyphus": {
       "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "variant": "high"
     },
     "oracle": {
       "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "variant": "high"
     },
     "librarian": {
       "model": "github-copilot/gemini-3-flash-preview",
@@ -23,17 +23,17 @@
     },
     "prometheus": {
       "model": "anthropic/claude-opus-4-6",
-      "variant": "max",
+      "variant": "high",
       "fallback_models": "github-copilot/gemini-3.1-pro-preview"
     },
     "metis": {
       "model": "anthropic/claude-opus-4-6",
-      "variant": "max",
+      "variant": "high",
       "fallback_models": "github-copilot/gemini-3.1-pro-preview"
     },
     "momus": {
       "model": "anthropic/claude-opus-4-6",
-      "variant": "max",
+      "variant": "high",
       "fallback_models": "github-copilot/gemini-3.1-pro-preview"
     },
     "atlas": {
@@ -51,7 +51,7 @@
     },
     "ultrabrain": {
       "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "variant": "high"
     },
     "quick": {
       "model": "anthropic/claude-haiku-4-5"
