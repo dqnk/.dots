@@ -18,5 +18,5 @@
       ]
     }
   },
-  "plugin": ["oh-my-opencode"]
+  "plugin": ["oh-my-opencode@latest"]
 }
