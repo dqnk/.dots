@@ -2,10 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "anthropic/claude-opus-4-6"
+      "model": "anthropic/claude-opus-4-6",
+      "fallback_models": "opencode-go/kimi-k2.5"
     },
     "oracle": {
-      "model": "anthropic/claude-opus-4-6"
+      "model": "anthropic/claude-opus-4-6",
+      "fallback_models": "opencode-go/glm-5"
     },
     "librarian": {
       "model": "opencode-go/minimax-m2.5"
@@ -17,13 +19,16 @@
       "model": "opencode-go/kimi-k2.5"
     },
     "prometheus": {
-      "model": "opencode-go/glm-5"
+      "model": "opencode-go/glm-5",
+      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
     },
     "metis": {
-      "model": "opencode-go/glm-5"
+      "model": "opencode-go/glm-5",
+      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
     },
     "momus": {
-      "model": "opencode-go/glm-5"
+      "model": "opencode-go/glm-5",
+      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
     },
     "atlas": {
       "model": "opencode-go/kimi-k2.5"
