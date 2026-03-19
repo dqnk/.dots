@@ -17,16 +17,13 @@
       "model": "opencode-go/kimi-k2.5"
     },
     "prometheus": {
-      "model": "opencode-go/glm-5",
-      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
+      "model": "opencode-go/glm-5"
     },
     "metis": {
-      "model": "opencode-go/glm-5",
-      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
+      "model": "opencode-go/glm-5"
     },
     "momus": {
-      "model": "opencode-go/glm-5",
-      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
+      "model": "opencode-go/glm-5"
     },
     "atlas": {
       "model": "opencode-go/kimi-k2.5"
