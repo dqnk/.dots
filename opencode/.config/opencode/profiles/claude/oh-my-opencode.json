@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "high"
+    },
+    "oracle": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "high"
+    },
+    "hephaestus": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "high"
+    },
+    "librarian": {
+      "model": "github-copilot/gemini-3-flash-preview",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
+    },
+    "explore": {
+      "model": "github-copilot/gemini-3-flash-preview",
+      "fallback_models": "openrouter/moonshotai/kimi-k2.5"
+    },
+    "multimodal-looker": {
+      "model": "openrouter/moonshotai/kimi-k2.5",
+      "variant": "medium"
+    },
+    "prometheus": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "high",
+      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
+    },
+    "metis": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "high",
+      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
+    },
+    "momus": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "high",
+      "fallback_models": "github-copilot/gemini-3.1-pro-preview"
+    },
+    "atlas": {
+      "model": "anthropic/claude-sonnet-4-6"
+    },
+    "sisyphus-junior": {
+      "model": "anthropic/claude-sonnet-4-6"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "github-copilot/gemini-3.1-pro-preview",
+      "variant": "high",
+      "fallback_models": "anthropic/claude-sonnet-4-6"
+    },
+    "ultrabrain": {
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "high"
+    },
+    "quick": {
+      "model": "anthropic/claude-haiku-4-5"
+    },
+    "unspecified-low": {
+      "model": "anthropic/claude-sonnet-4-6"
+    },
+    "unspecified-high": {
+      "model": "anthropic/claude-sonnet-4-6"
+    },
+    "writing": {
+      "model": "anthropic/claude-sonnet-4-6"
+    }
+  }
+}
