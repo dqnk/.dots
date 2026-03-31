@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "lsp": {
+    "custom-lsp": {
+      "command": ["basedpyright-langserver", "--stdio"],
+      "extensions": [".py", ".pyi"]
+    }
+  },
+  "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--executable-path",
+        "/usr/sbin/chromium"
+      ]
+    }
+  },
+  "small_model": "opencode-go/kimi-k2.5",
+  "plugin": ["oh-my-opencode@latest"]
+}
