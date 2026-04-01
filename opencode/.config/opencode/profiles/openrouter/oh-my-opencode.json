@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "oracle": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "librarian": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "explore": {
+      "model": "openrouter/z-ai/glm-4.7-flash"
+    },
+    "multimodal-looker": {
+      "model": "zai-coding-plan/glm-4.6v"
+    },
+    "prometheus": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "metis": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "momus": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "atlas": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "sisyphus-junior": {
+      "model": "openrouter/z-ai/glm-5"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "ultrabrain": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "quick": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "unspecified-low": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "unspecified-high": {
+      "model": "openrouter/z-ai/glm-5"
+    },
+    "writing": {
+      "model": "openrouter/z-ai/glm-5"
+    }
+  }
+}
