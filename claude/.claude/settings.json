@@ -1,9 +1,14 @@
 {
   "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "sh /home/dqnk/.claude/statusline-command.sh"
+  },
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "caveman@caveman": true,
-    "pyright-lsp@claude-plugins-official": true
+    "pyright-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -19,9 +24,5 @@
       }
     }
   },
-  "effortLevel": "high",
-  "statusLine": {
-    "type": "command",
-    "command": "sh /home/dqnk/.claude/statusline-command.sh"
-  }
+  "effortLevel": "high"
 }
