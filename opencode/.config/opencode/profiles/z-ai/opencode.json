@@ -2,8 +2,14 @@
   "$schema": "https://opencode.ai/config.json",
   "lsp": {
     "custom-lsp": {
-      "command": ["basedpyright-langserver", "--stdio"],
-      "extensions": [".py", ".pyi"]
+      "command": [
+        "basedpyright-langserver",
+        "--stdio"
+      ],
+      "extensions": [
+        ".py",
+        ".pyi"
+      ]
     }
   },
   "mcp": {
@@ -19,5 +25,7 @@
     }
   },
   "small_model": "opencode-go/kimi-k2.5",
-  "plugin": ["oh-my-opencode@latest"]
+  "plugin": [
+    "oh-my-openagent@latest"
+  ]
 }
