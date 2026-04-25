@@ -24,5 +24,6 @@
       }
     }
   },
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "editorMode": "vim"
 }
