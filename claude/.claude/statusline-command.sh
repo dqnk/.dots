@@ -57,7 +57,7 @@ if [ -n "$five_hour_pct" ]; then
     ttl=$(fmt_ttl "$secs_left")
   fi
   if [ -n "$ttl" ]; then
-    limits=" [5h:$(printf '%.0f' "$five_hour_pct")% rst:${ttl}]"
+    limits=" [5h:$(printf '%.0f' "$five_hour_pct")% ${ttl}]"
   else
     limits=" [5h:$(printf '%.0f' "$five_hour_pct")%]"
   fi
@@ -69,7 +69,7 @@ if [ -n "$seven_day_pct" ]; then
     ttl=$(fmt_ttl "$secs_left")
   fi
   if [ -n "$ttl" ]; then
-    limits="$limits [7d:$(printf '%.0f' "$seven_day_pct")% rst:${ttl}]"
+    limits="$limits [7d:$(printf '%.0f' "$seven_day_pct")% ${ttl}]"
   else
     limits="$limits [7d:$(printf '%.0f' "$seven_day_pct")%]"
   fi
