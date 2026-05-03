@@ -5,6 +5,7 @@ user=$(whoami)
 host=$(hostname -s)
 cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd')
 model=$(echo "$input" | jq -r '.model.display_name // ""')
+effort=$(echo "$input" | jq -r '.effort.level // ""')
 used=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 five_hour_pct=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
 five_hour_reset=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // empty')
@@ -45,11 +46,16 @@ fi
 # Build model info
 mdl=""
 if [ -n "$model" ]; then
-  mdl=" ($model)"
+  if [ -n "$effort" ]; then
+    mdl=" ($model, $effort)"
+  else
+    mdl=" ($model)"
+  fi
 fi
 
 # Build rate limit info
 limits=""
+limits7=""
 if [ -n "$five_hour_pct" ]; then
   ttl=""
   if [ -n "$five_hour_reset" ]; then
@@ -57,9 +63,9 @@ if [ -n "$five_hour_pct" ]; then
     ttl=$(fmt_ttl "$secs_left")
   fi
   if [ -n "$ttl" ]; then
-    limits=" [5h:$(printf '%.0f' "$five_hour_pct")% ${ttl}]"
+    limits=" [$(printf '%.0f' "$five_hour_pct")% ${ttl}]"
   else
-    limits=" [5h:$(printf '%.0f' "$five_hour_pct")%]"
+    limits=" [$(printf '%.0f' "$five_hour_pct")%]"
   fi
 fi
 if [ -n "$seven_day_pct" ]; then
@@ -69,11 +75,11 @@ if [ -n "$seven_day_pct" ]; then
     ttl=$(fmt_ttl "$secs_left")
   fi
   if [ -n "$ttl" ]; then
-    limits="$limits [7d:$(printf '%.0f' "$seven_day_pct")% ${ttl}]"
+    limits7=" [$(printf '%.0f' "$seven_day_pct")% ${ttl}]"
   else
-    limits="$limits [7d:$(printf '%.0f' "$seven_day_pct")%]"
+    limits7=" [$(printf '%.0f' "$seven_day_pct")%]"
   fi
 fi
 
-printf "\033[32m%s@%s\033[0m \033[34m%s\033[0m\033[33m%s\033[0m\033[36m%s\033[0m\033[35m%s\033[0m" \
-  "$user" "$host" "$short_cwd" "$mdl" "$ctx" "$limits"
+printf "\033[32m%s@%s\033[0m \033[34m%s\033[0m\033[33m%s\033[0m\033[36m%s\033[0m\033[35m%s\033[0m\033[2;35m%s\033[0m" \
+  "$user" "$host" "$short_cwd" "$mdl" "$ctx" "$limits" "$limits7"
