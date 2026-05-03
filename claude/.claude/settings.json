@@ -1,4 +1,5 @@
 {
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "sh /home/dqnk/.claude/statusline-command.sh"
@@ -24,10 +25,9 @@
     }
   },
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "showThinkingSummaries": true,
-  "effortLevel": "high",
-  "editorMode": "vim",
-  "model": "opus"
+  "editorMode": "vim"
 }
