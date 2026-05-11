@@ -19,5 +19,5 @@
     }
   },
   "small_model": "opencode-go/kimi-k2.5",
-  "plugin": ["oh-my-opencode@latest"]
+  "plugin": ["oh-my-openagent@latest"]
 }
