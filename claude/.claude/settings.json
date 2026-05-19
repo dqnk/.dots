@@ -5,10 +5,10 @@
     "command": "sh /home/dqnk/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
-    "context7@claude-plugins-official": true,
+    "context7@claude-plugins-official": false,
     "caveman@caveman": true,
-    "pyright-lsp@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "pyright-lsp@claude-plugins-official": false,
+    "superpowers@claude-plugins-official": false
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
