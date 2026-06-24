@@ -55,9 +55,10 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("sunsetr")
 	hl.exec_cmd("sleep 1 && sunsetr restart")
 	-- hl.exec_cmd("(killall hyprsunset) || (sleep 1 && hyprsunset -t 2500)")
-	-- gpu color
-	hl.exec_cmd("~/repos/OpenRGB/build/openrgb -d 0 -c 000000")
 end)
+
+-- gpu color
+hl.exec_cmd("~/repos/OpenRGB/build/openrgb -d 0 -c 000000")
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
