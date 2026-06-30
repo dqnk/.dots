@@ -29,5 +29,6 @@
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "showThinkingSummaries": true,
-  "editorMode": "vim"
+  "editorMode": "vim",
+  "tui": "fullscreen"
 }
