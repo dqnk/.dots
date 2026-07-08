@@ -274,15 +274,24 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"), { loc
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"), { locked = true, repeating = true })
 
 -- Laptop lid switch
+-- Lid closed
 hl.bind("switch:on:Lid Switch", function()
-	hl.dispatch(hl.dsp.exec_cmd("hyprlock"))
-	hl.timer(function()
-		hl.dispatch(hl.dsp.dpms({ action = "disable" }))
-	end, { timeout = 500, type = "oneshot" })
+	if #hl.get_monitors() > 1 then
+		hl.monitor({ output = "eDP-1", disabled = true }) -- external attached → panel off
+		hl.timer(function()
+			hl.exec_cmd("hyprpaper")
+		end, { timeout = 500, type = "oneshot" })
+	else
+		hl.exec_cmd("hyprlock") -- only screen → just lock
+	end
 end, { locked = true })
 
+-- Lid opened
 hl.bind("switch:off:Lid Switch", function()
-	hl.dispatch(hl.dsp.dpms({ action = "enable" }))
+	hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "0x0", scale = 1, disabled = false })
+	hl.timer(function()
+		hl.exec_cmd("hyprpaper")
+	end, { timeout = 500, type = "oneshot" })
 end, { locked = true })
 
 --------------------------------
