@@ -1,5 +1,5 @@
 {
-  "model": "opus",
+  "model": "fable",
   "statusLine": {
     "type": "command",
     "command": "sh /home/dqnk/.claude/statusline-command.sh"
@@ -25,11 +25,12 @@
     }
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
+  "effortLevel": "ultracode",
   "tui": "fullscreen",
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "showThinkingSummaries": true,
+  "skipWorkflowUsageWarning": true,
   "theme": "dark",
   "editorMode": "vim"
 }
