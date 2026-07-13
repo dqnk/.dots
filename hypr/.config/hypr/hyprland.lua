@@ -11,17 +11,41 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 -- Old: monitor=DP-1,highrr,0x0,1
-hl.monitor({
-	output = "eDP-1",
-	mode = "highrr",
-	position = "0x1080",
-	scale = 1,
-})
+-- hl.monitor({
+-- 	output = "eDP-1",
+-- 	mode = "highrr",
+-- 	position = "0x1080",
+-- 	scale = 1,
+-- })
+-- Hyprland re-applies monitor config on every reload, which would re-enable
+-- eDP-1 even with the lid closed (see hyprwm/Hyprland#4090). So we read the
+-- actual lid state at config-evaluation time and declare eDP-1 accordingly.
+-- This also covers booting with the lid already closed.
+local function lid_closed()
+	local p = io.popen("cat /proc/acpi/button/lid/*/state 2>/dev/null")
+	if not p then
+		return false
+	end
+	local s = p:read("*a")
+	p:close()
+	return s:find("closed") ~= nil
+end
+
+if lid_closed() then
+	hl.monitor({ output = "eDP-1", disabled = true })
+else
+	hl.monitor({
+		output = "eDP-1",
+		mode = "highrr",
+		position = "0x1080",
+		scale = 1,
+	})
+end
 
 -- Old: monitor=HDMI-A-1,disable
 hl.monitor({
-	output = "HDMI-A-1",
-	mode = "highrr",
+	output = "DP-1",
+	mode = "3840x2160@60.00",
 	position = "3840x2160",
 	scale = 2,
 })
