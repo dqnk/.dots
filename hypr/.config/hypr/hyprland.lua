@@ -139,7 +139,7 @@ hl.config({
 	},
 
 	cursor = {
-		no_warps = true, -- don't jump the cursor to the focused window
+		no_warps = false, -- don't jump the cursor to the focused window
 		persistent_warps = true, -- remember per-window cursor position on refocus
 	},
 })
@@ -296,7 +296,6 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 -- Brightness keys
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"), { locked = true, repeating = true })
-
 -- Laptop lid switch
 -- Lid closed
 hl.bind("switch:on:Lid Switch", function()
@@ -312,7 +311,13 @@ end, { locked = true })
 
 -- Lid opened
 hl.bind("switch:off:Lid Switch", function()
-	hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "0x0", scale = 1, disabled = false })
+	hl.monitor({
+		output = "eDP-1",
+		mode = "highrr",
+		position = "0x1080",
+		scale = 1,
+		disabled = false,
+	})
 	hl.timer(function()
 		hl.exec_cmd("hyprpaper")
 	end, { timeout = 500, type = "oneshot" })
