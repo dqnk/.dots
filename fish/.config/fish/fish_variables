@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export GTK_THEME:Adwaita\x2ddark
 SETUVAR --export PYENV_ROOT:/home/dqnk/\x2epyenv
 SETUVAR --export SSH_AGENT_PID:2379
 SETUVAR --export SSH_AUTH_SOCK:/run/user/1000/gcr/ssh
