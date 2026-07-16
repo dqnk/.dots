@@ -302,7 +302,7 @@ hl.bind("switch:on:Lid Switch", function()
 	if #hl.get_monitors() > 1 then
 		hl.monitor({ output = "eDP-1", disabled = true }) -- external attached → panel off
 		hl.timer(function()
-			hl.exec_cmd("hyprpaper")
+			hl.exec_cmd("pkill -x hyprpaper; sleep 0.2; hyprpaper")
 		end, { timeout = 500, type = "oneshot" })
 	else
 		hl.exec_cmd("hyprlock") -- only screen → just lock
@@ -319,7 +319,7 @@ hl.bind("switch:off:Lid Switch", function()
 		disabled = false,
 	})
 	hl.timer(function()
-		hl.exec_cmd("hyprpaper")
+		hl.exec_cmd("pkill -x hyprpaper; sleep 0.2; hyprpaper")
 	end, { timeout = 500, type = "oneshot" })
 end, { locked = true })
 
