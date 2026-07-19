@@ -1,6 +1,7 @@
 Install Arch Linux with packages:
 
 ```
+adw-gtk-theme
 alacritty
 amd-ucode
 archlinux-appstream-data
@@ -73,12 +74,14 @@ gnome-common
 gnome-desktop
 gnome-desktop-4
 gnome-desktop-common
+gnome-disk-utility
 gnome-epub-thumbnailer
 gnome-keybindings
 gnome-keyring
 gnome-mimeapps
 gnome-online-accounts
 gnome-photos
+gnome-system-monitor
 gnome-screenshot
 gnome-terminal
 gnome-themes-extra
@@ -186,6 +189,7 @@ wlroots0.17
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+xdg-desktop-portal-kde
 xdg-desktop-portal-wlr
 xorg-xwayland
 yarn
@@ -237,6 +241,13 @@ In web browser set `layout.css.devPixelsPerPx` to 2 or 3 to increase browser sca
 
 and set in `kvantummanager`.
 
+For GTK theme, use:
+
+```
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+```
+
 For Dolphin might have to run
 
 ```
@@ -261,4 +272,15 @@ For Downloads mount them as ramdisk by adding this to `/etc/fstab`:
 
 ```
 tmpfs /home/<user>/Downloads    tmpfs  rw,noexec,nodev,nosuid,uid=<user>,gid=<user>,mode=1700,size=26G 0 0
+```
+
+```
+{
+  "permissions": {
+    "deny": [
+      "Read(~/work/project/**)",
+      "Edit(~/work/project/**)"
+    ]
+  }
+}
 ```
