@@ -6,6 +6,7 @@ alias v='nvim'
 alias yay='paru'
 alias timer="termdown"
 alias devcontainer "devcontainer --docker-path podman"
+alias sandbox-vm "$HOME/repos/sandbox-vm/scripts/run.sh"
 fish_vi_key_bindings
 
 set -x GEM_HOME (gem env user_gemhome)
