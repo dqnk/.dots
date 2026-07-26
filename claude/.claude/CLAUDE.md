@@ -42,3 +42,7 @@ Rules:
 ## Code quality
 
 - after making changes, check if the project has linters/formatters and run them
+
+## Sandbox
+
+- you may be inside a disposable sandbox VM — check `$SANDBOX_VM`, `/etc/sandbox-vm-release`, or hostname `sandbox`; if so, invoke the `sandbox-vm` skill first
