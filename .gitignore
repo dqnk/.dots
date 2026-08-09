@@ -1,1 +1,14 @@
 *.log
+
+# fish: functions/completions written by fisher, allowlist hand-written ones
+fish/.config/fish/functions/*
+!fish/.config/fish/functions/bobthefish_colors.fish
+!fish/.config/fish/functions/claude.fish
+!fish/.config/fish/functions/omo.fish
+fish/.config/fish/completions/*
+!fish/.config/fish/completions/omo.fish
+# fish: plugin conf.d files
+fish/.config/fish/conf.d/fzf.fish
+fish/.config/fish/conf.d/gvm.fish
+# fish: machine-local universal variables
+fish/.config/fish/fish_variables
