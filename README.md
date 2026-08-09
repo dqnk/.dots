@@ -210,7 +210,7 @@ qt6ct-kde
 sunsetr-bin
 ```
 
-- Use shell `fish`
+- Use shell `fish` with `fisher` (`fisher update`)
 
 - Get available mirrors with:
 
