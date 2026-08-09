@@ -9,21 +9,21 @@ fi
 
 # the repo vendors oh-my-zsh at ~/.oh-my-zsh as a git submodule
 export ZSH="${ZSH:-$HOME/.oh-my-zsh}"
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # git             replaces the omf `vcs` package
 # fzf             replaces the fzf.fish package
 # dirhistory      replaces fish's prevd/nextd alt-left / alt-right
 # nvm             replaces the nvm.fish fisher plugin
 # the last three are external, install into $ZSH_CUSTOM/plugins
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 plugins=(
 	git
 	fzf
 	dirhistory
 	nvm
-	zsh-autosuggestions
-	zsh-history-substring-search
-	zsh-syntax-highlighting
 )
 
 # fish's ctrl-f directory search; the fzf.fish config disabled the history,
@@ -31,11 +31,21 @@ plugins=(
 export FZF_CTRL_T_COMMAND='fd --hidden --max-depth 5'
 export FZF_ALT_C_COMMAND='fd --type=directory --hidden --max-depth 5'
 
+# fzf.fish's _fzf_wrapper applied these defaults in fish; zsh gets fzf's stock
+# look without them
+export FZF_DEFAULT_OPTS='--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker=*'
+
+# fish's ctrl-f previewed the highlighted path via _fzf_preview_file; the oh-my-zsh
+# fzf plugin has no preview, so inline the same bat/ls behaviour
+export FZF_CTRL_T_OPTS='--preview="if [ -d {} ]; then ls -A -F {}; elif command -v bat >/dev/null 2>&1; then bat --style=numbers --color=always {}; else cat {}; fi"'
+
+(( $+commands[fzf] )) && source <(fzf --zsh)
+
 source $ZSH/oh-my-zsh.sh
 
 # # ── vi mode ──────────────────────────────────────────────────────────────────
 #
-# bindkey -v
+bindkey -v
 # # fish_escape_delay_ms is 30; KEYTIMEOUT is in 10ms units
 # KEYTIMEOUT=3
 #
@@ -59,10 +69,10 @@ source $ZSH/oh-my-zsh.sh
 #
 # # fish disabled fzf's history binding because it has its own `/` history pager;
 # # zsh has no equivalent, so ctrl-r is kept
-# if (( $+widgets[fzf-file-widget] )); then
-# 	bindkey '^F' fzf-file-widget                 # fish fzf_configure_bindings --directory=\cf
-# 	bindkey -M viins '^R' fzf-history-widget
-# fi
+if (( $+widgets[fzf-file-widget] )); then
+	bindkey '^F' fzf-file-widget                 # fish fzf_configure_bindings --directory=\cf
+	bindkey -M viins '^R' fzf-history-widget
+fi
 #
 # # fish accepts the suggestion on forward-char / forward-single-char /
 # # forward-word only, never on $ or A
@@ -221,6 +231,9 @@ compdef '_files -W ~/.config/opencode/profiles -/' omo
 # ── tool activation ──────────────────────────────────────────────────────────
 
 (( $+commands[mise] )) && eval "$(mise activate zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
