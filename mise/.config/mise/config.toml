@@ -1,5 +1,6 @@
 [tools]
 go = "1.25.1"
+jj = "latest"
 node = "24"
 
 [settings]
