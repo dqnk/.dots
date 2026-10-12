@@ -7,6 +7,7 @@ fish/.config/fish/functions/*
 !fish/.config/fish/functions/omo.fish
 fish/.config/fish/completions/*
 !fish/.config/fish/completions/omo.fish
+!fish/.config/fish/completions/jj.fish
 # fish: plugin conf.d files
 fish/.config/fish/conf.d/fzf.fish
 fish/.config/fish/conf.d/gvm.fish
